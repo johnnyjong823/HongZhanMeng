@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # 強制 HTTPS (如果需要)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # 將所有請求導向 public 目錄
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# 禁止目錄瀏覽
+Options -Indexes
+
+# 禁止存取敏感檔案 (以點開頭的檔案如 .env)
+<FilesMatch "^\.(?!htaccess)">
+    Require all denied
+</FilesMatch>

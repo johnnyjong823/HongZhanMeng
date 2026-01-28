@@ -1,0 +1,27 @@
+# Logs
+storage/logs/*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Uploads (keep folder structure)
+!public/uploads/
+public/uploads/**/*
+!public/uploads/.gitkeep
+!public/uploads/**/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp

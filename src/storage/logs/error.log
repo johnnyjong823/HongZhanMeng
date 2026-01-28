@@ -1,0 +1,507 @@
+[2026-01-19 17:24:35] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Services\AuthService.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\AccountController.php(17): App\Services\AuthService->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\AccountController->__construct()
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('AccountControll...', 'login', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#10 {main}
+
+[2026-01-19 17:25:43] Error: Call to undefined method App\Services\AuthService::isLoggedIn() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\AccountController.php:26
+Stack trace:
+#0 [internal function]: App\Controllers\AccountController->login()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('AccountControll...', 'login', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#6 {main}
+
+[2026-01-19 17:49:05] Error: Call to undefined method App\Models\LoginLog::countTodayLogins() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\DashboardController.php:29
+Stack trace:
+#0 [internal function]: App\Controllers\DashboardController->index()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('DashboardContro...', 'index', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#6 {main}
+
+[2026-01-19 18:26:55] Error: Call to undefined method App\Models\LoginLog::countTodayLogins() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\DashboardController.php:29
+Stack trace:
+#0 [internal function]: App\Controllers\DashboardController->index()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('DashboardContro...', 'index', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#6 {main}
+
+[2026-01-19 18:27:01] Error: Call to undefined method App\Models\LoginLog::countTodayLogins() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\DashboardController.php:29
+Stack trace:
+#0 [internal function]: App\Controllers\DashboardController->index()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('DashboardContro...', 'index', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#6 {main}
+
+[2026-01-19 20:21:33] Error: Call to undefined function mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Views\layouts\admin.php:212
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(68): include()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(30): Core\View->getLayoutContent('admin')
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Controller.php(45): Core\View->render('admin/dashboard...', Array, 'admin')
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\DashboardController.php(39): Core\Controller->view('admin/dashboard...', Array, 'admin')
+#4 [internal function]: App\Controllers\DashboardController->index()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('DashboardContro...', 'index', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#10 {main}
+
+[2026-01-19 20:24:35] TypeError: http_response_code(): Argument #1 ($response_code) must be of type int, string given in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php:147
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(147): http_response_code('42S22')
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(132): Core\App->handleException(Object(PDOException))
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#4 {main}
+
+[2026-01-19 20:24:41] TypeError: http_response_code(): Argument #1 ($response_code) must be of type int, string given in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php:147
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(147): http_response_code('42S22')
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(132): Core\App->handleException(Object(PDOException))
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#4 {main}
+
+[2026-01-19 20:26:49] Error: Call to undefined method App\Models\Role::getAvailableRoles() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\UserController.php:90
+Stack trace:
+#0 [internal function]: App\Controllers\UserController->index()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('UserController', 'index', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#6 {main}
+
+[2026-01-19 20:41:00] Error: Call to undefined method App\Models\ActionLog::paginateWithUser() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\ActionLogController.php:68
+Stack trace:
+#0 [internal function]: App\Controllers\ActionLogController->index()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('ActionLogContro...', 'index', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#6 {main}
+
+[2026-01-19 20:46:08] Error: Call to undefined method App\Models\LoginLog::paginateWithUser() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\LoginLogController.php:68
+Stack trace:
+#0 [internal function]: App\Controllers\LoginLogController->index()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('LoginLogControl...', 'index', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#6 {main}
+
+[2026-01-20 10:12:18] Error: Non-static method Core\View::render() cannot be called statically in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\BannerController.php:38
+Stack trace:
+#0 [internal function]: App\Controllers\BannerController->index()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('BannerControlle...', 'index', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\router.php(19): require('D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...')
+#6 {main}
+
+[2026-01-27 11:20:37] Error: Call to undefined function mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Views\frontend\home\index.php:144
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(50): include()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(25): Core\View->getViewContent('frontend/home/i...')
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Controller.php(45): Core\View->render('frontend/home/i...', Array, 'frontend')
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(27): Core\Controller->view('frontend/home/i...', Array, 'frontend')
+#4 [internal function]: App\Controllers\HomeController->index()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 {main}
+
+[2026-01-27 11:20:46] Error: Call to undefined function mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Views\frontend\home\index.php:144
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(50): include()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(25): Core\View->getViewContent('frontend/home/i...')
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Controller.php(45): Core\View->render('frontend/home/i...', Array, 'frontend')
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(27): Core\Controller->view('frontend/home/i...', Array, 'frontend')
+#4 [internal function]: App\Controllers\HomeController->index()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 {main}
+
+[2026-01-27 11:20:55] Error: Call to undefined function mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Views\frontend\home\index.php:144
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(50): include()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(25): Core\View->getViewContent('frontend/home/i...')
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Controller.php(45): Core\View->render('frontend/home/i...', Array, 'frontend')
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(27): Core\Controller->view('frontend/home/i...', Array, 'frontend')
+#4 [internal function]: App\Controllers\HomeController->index()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 {main}
+
+[2026-01-27 11:21:26] Error: Call to undefined function mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Views\frontend\home\index.php:144
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(50): include()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(25): Core\View->getViewContent('frontend/home/i...')
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Controller.php(45): Core\View->render('frontend/home/i...', Array, 'frontend')
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(27): Core\Controller->view('frontend/home/i...', Array, 'frontend')
+#4 [internal function]: App\Controllers\HomeController->index()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 {main}
+
+[2026-01-27 18:08:30] Error: Call to undefined function mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Views\frontend\knowledge\index.php:40
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(50): include()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(25): Core\View->getViewContent('frontend/knowle...')
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Controller.php(45): Core\View->render('frontend/knowle...', Array, 'frontend')
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(128): Core\Controller->view('frontend/knowle...', Array, 'frontend')
+#4 [internal function]: App\Controllers\HomeController->knowledge()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'knowledge', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 {main}
+
+[2026-01-27 21:17:49] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\BannerController.php(19): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\BannerController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('BannerControlle...', 'create', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:18:42] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\BannerController.php(19): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\BannerController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('BannerControlle...', 'create', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:20:01] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Services\AuthService.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\AccountController.php(17): App\Services\AuthService->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\AccountController->__construct()
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('AccountControll...', 'login', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 {main}
+
+[2026-01-27 21:21:18] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Services\AuthService.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\AccountController.php(17): App\Services\AuthService->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\AccountController->__construct()
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('AccountControll...', 'login', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 {main}
+
+[2026-01-27 21:21:21] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:23] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:33] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:34] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:34] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:43] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:44] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:45] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:45] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:45] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:45] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:21:52] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:22:32] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:22:33] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-27 21:22:52] Error: Undefined constant PDO::MYSQL_ATTR_INIT_COMMAND in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\config\database.php:18
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(11): require()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Database.php(40): Core\Database->__construct()
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Model.php(13): Core\Database::getInstance()
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(17): Core\Model->__construct()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(107): App\Controllers\HomeController->__construct()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-28 13:53:05] Error: Call to undefined function App\Models\imagecreatefrompng() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php:439
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php(386): App\Models\Banner->createImageFromFile('C:\\Users\\JoJo\\A...', 'image/png')
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php(345): App\Models\Banner->compressImage('C:\\Users\\JoJo\\A...', 'D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...', 'image/png', 1920, 85)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\BannerController.php(120): App\Models\Banner->uploadImage(Array)
+#3 [internal function]: App\Controllers\BannerController->store()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('BannerControlle...', 'store', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-28 13:53:17] Error: Call to undefined function App\Models\imagecreatefrompng() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php:439
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php(386): App\Models\Banner->createImageFromFile('C:\\Users\\JoJo\\A...', 'image/png')
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php(345): App\Models\Banner->compressImage('C:\\Users\\JoJo\\A...', 'D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...', 'image/png', 1920, 85)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\BannerController.php(120): App\Models\Banner->uploadImage(Array)
+#3 [internal function]: App\Controllers\BannerController->store()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('BannerControlle...', 'store', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-28 13:55:28] Error: Call to undefined function imagecreatefrompng() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php:439
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php(386): App\Models\Banner->createImageFromFile('C:\\Users\\JoJo\\A...', 'image/png')
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php(345): App\Models\Banner->compressImage('C:\\Users\\JoJo\\A...', 'D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...', 'image/png', 1920, 85)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\BannerController.php(120): App\Models\Banner->uploadImage(Array)
+#3 [internal function]: App\Controllers\BannerController->store()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('BannerControlle...', 'store', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-28 13:56:06] Error: Call to undefined function imagecreatefrompng() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php:439
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php(386): App\Models\Banner->createImageFromFile('C:\\Users\\JoJo\\A...', 'image/png')
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Banner.php(345): App\Models\Banner->compressImage('C:\\Users\\JoJo\\A...', 'D:\\MyWork\\\xE5\xBF\x85\xE5\x8A...', 'image/png', 1920, 85)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\BannerController.php(120): App\Models\Banner->uploadImage(Array)
+#3 [internal function]: App\Controllers\BannerController->store()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('BannerControlle...', 'store', Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#8 {main}
+
+[2026-01-28 17:33:32] Error: Call to undefined function App\Controllers\mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php:185
+Stack trace:
+#0 [internal function]: App\Controllers\HomeController->knowledgeDetail(1)
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'knowledgeDetail', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 {main}
+
+[2026-01-28 17:34:09] Error: Call to undefined function mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php:185
+Stack trace:
+#0 [internal function]: App\Controllers\HomeController->knowledgeDetail(1)
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'knowledgeDetail', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 {main}
+
+[2026-01-28 17:34:13] Error: Call to undefined function mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php:185
+Stack trace:
+#0 [internal function]: App\Controllers\HomeController->knowledgeDetail(1)
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(114): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'knowledgeDetail', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 {main}
+
+[2026-01-28 20:28:34] Error: Call to undefined function mb_substr() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Views\frontend\home\index.php:187
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(50): include()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\View.php(25): Core\View->getViewContent('frontend/home/i...')
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Controller.php(45): Core\View->render('frontend/home/i...', Array, 'frontend')
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\HomeController.php(39): Core\Controller->view('frontend/home/i...', Array, 'frontend')
+#4 [internal function]: App\Controllers\HomeController->index()
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(139): call_user_func_array(Array, Array)
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('HomeController', 'index', Array)
+#7 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#9 {main}
+
