@@ -24,13 +24,21 @@ class Role extends Model
     }
     
     /**
+     * 依角色名稱查詢
+     */
+    public function findByName($name)
+    {
+        return $this->findBy('role_name', $name);
+    }
+    
+    /**
      * 取得角色的所有功能權限
      */
     public function getFunctions($roleId)
     {
         $sql = "SELECT f.*, rf.can_view, rf.can_create, rf.can_edit, rf.can_delete
-                FROM AcFunctions f
-                INNER JOIN AcRoleFunctions rf ON f.id = rf.function_id
+                FROM acfunctions f
+                INNER JOIN acrolefunctions rf ON f.id = rf.function_id
                 WHERE rf.role_id = :role_id AND f.status = 1
                 ORDER BY f.sort_order";
         
@@ -42,7 +50,7 @@ class Role extends Model
      */
     public function getFunctionIds($roleId)
     {
-        $sql = "SELECT function_id FROM AcRoleFunctions WHERE role_id = :role_id";
+        $sql = "SELECT function_id FROM acrolefunctions WHERE role_id = :role_id";
         $functions = $this->db->query($sql, ['role_id' => $roleId])->fetchAll();
         
         return array_column($functions, 'function_id');
@@ -54,7 +62,7 @@ class Role extends Model
     public function getFunctionPermissions($roleId)
     {
         $sql = "SELECT function_id, can_view, can_create, can_edit, can_delete
-                FROM AcRoleFunctions 
+                FROM acrolefunctions 
                 WHERE role_id = :role_id";
         
         $permissions = $this->db->query($sql, ['role_id' => $roleId])->fetchAll();
@@ -82,14 +90,14 @@ class Role extends Model
         try {
             // 先刪除現有權限
             $this->db->query(
-                "DELETE FROM AcRoleFunctions WHERE role_id = :role_id",
+                "DELETE FROM acrolefunctions WHERE role_id = :role_id",
                 ['role_id' => $roleId]
             );
             
             // 新增權限
             foreach ($functions as $func) {
                 $this->db->query(
-                    "INSERT INTO AcRoleFunctions 
+                    "INSERT INTO acrolefunctions 
                      (role_id, function_id, can_view, can_create, can_edit, can_delete)
                      VALUES (:role_id, :function_id, :can_view, :can_create, :can_edit, :can_delete)",
                     [
@@ -112,11 +120,40 @@ class Role extends Model
     }
     
     /**
+     * 同步角色功能權限
+     * 支援兩種格式：
+     * 1. 單純 ID 陣列: [1, 2, 3]
+     * 2. 詳細權限陣列: [['function_id' => 1, 'can_view' => 1, ...], ...]
+     */
+    public function syncFunctions($roleId, array $functions)
+    {
+        // 檢查傳入格式，如果是單純 ID 陣列則轉換
+        $normalizedFunctions = [];
+        foreach ($functions as $func) {
+            if (is_array($func) && isset($func['function_id'])) {
+                // 已經是詳細權限格式
+                $normalizedFunctions[] = $func;
+            } else {
+                // 單純 ID，轉換為預設權限格式
+                $normalizedFunctions[] = [
+                    'function_id' => $func,
+                    'can_view' => 1,
+                    'can_create' => 1,
+                    'can_edit' => 1,
+                    'can_delete' => 1,
+                ];
+            }
+        }
+        
+        return $this->setFunctions($roleId, $normalizedFunctions);
+    }
+    
+    /**
      * 取得可授權的角色
      */
     public function getAssignableRoles($currentLevel)
     {
-        $sql = "SELECT * FROM AcRoles 
+        $sql = "SELECT * FROM acroles 
                 WHERE level > :level AND status = 1
                 ORDER BY level";
         

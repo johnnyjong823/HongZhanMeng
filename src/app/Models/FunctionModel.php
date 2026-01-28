@@ -89,8 +89,8 @@ class FunctionModel extends Model
             // 其他使用者只顯示有權限的選單
             $sql = "SELECT DISTINCT f.*
                     FROM {$this->table} f
-                    INNER JOIN AcRoleFunctions rf ON f.id = rf.function_id
-                    INNER JOIN AcUserRoles ur ON rf.role_id = ur.role_id
+                    INNER JOIN acrolefunctions rf ON f.id = rf.function_id
+                    INNER JOIN acuserroles ur ON rf.role_id = ur.role_id
                     WHERE ur.user_id = :user_id 
                       AND f.status = 1 
                       AND f.is_menu = 1

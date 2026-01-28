@@ -96,7 +96,7 @@ class FunctionController extends Controller
         return $this->json([
             'success' => true,
             'message' => '功能建立成功',
-            'redirect' => '/admin/functions'
+            'redirect' => url('/admin/functions')
         ]);
     }
     

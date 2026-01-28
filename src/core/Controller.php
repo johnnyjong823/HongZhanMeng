@@ -50,6 +50,11 @@ abstract class Controller
      */
     protected function redirect($url, $statusCode = 302)
     {
+        // 自動加上 base_path (如果是相對路徑)
+        if (strpos($url, '/') === 0 && strpos($url, '//') !== 0) {
+            $url = url($url);
+        }
+        
         header('Location: ' . $url, true, $statusCode);
         exit;
     }

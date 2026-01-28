@@ -92,6 +92,11 @@ function upload_url($path)
  */
 function redirect($url)
 {
+    // 自動加上 base_path (如果是相對路徑)
+    if (strpos($url, '/') === 0 && strpos($url, '//') !== 0) {
+        $url = url($url);
+    }
+    
     header('Location: ' . $url);
     exit;
 }

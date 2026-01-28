@@ -131,7 +131,7 @@ class KnowledgeController extends Controller
         
         if ($itemId) {
             $_SESSION['flash'] = ['type' => 'success', 'message' => '知識分享已新增'];
-            $this->json(['success' => true, 'message' => '知識分享已新增', 'redirect' => '/admin/knowledge']);
+            $this->json(['success' => true, 'message' => '知識分享已新增', 'redirect' => url('/admin/knowledge')]);
         } else {
             // 刪除已上傳的圖片
             if (!empty($data['image_path'])) {
@@ -150,7 +150,7 @@ class KnowledgeController extends Controller
         
         if (!$item) {
             $_SESSION['flash'] = ['type' => 'error', 'message' => '找不到指定的知識分享'];
-            header('Location: /admin/knowledge');
+            header('Location: ' . url('/admin/knowledge'));
             exit;
         }
         
@@ -235,7 +235,7 @@ class KnowledgeController extends Controller
         
         if ($result) {
             $_SESSION['flash'] = ['type' => 'success', 'message' => '知識分享已更新'];
-            $this->json(['success' => true, 'message' => '知識分享已更新', 'redirect' => '/admin/knowledge']);
+            $this->json(['success' => true, 'message' => '知識分享已更新', 'redirect' => url('/admin/knowledge')]);
         } else {
             $this->json(['success' => false, 'message' => '更新失敗，請稍後再試']);
         }

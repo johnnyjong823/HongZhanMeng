@@ -505,3 +505,41 @@ Stack trace:
 #8 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
 #9 {main}
 
+[2026-01-28 20:38:37] Error: Call to undefined method App\Models\User::assignRoles() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\UserController.php:184
+Stack trace:
+#0 [internal function]: App\Controllers\UserController->store()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(139): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('UserController', 'store', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 {main}
+
+[2026-01-28 20:41:11] Error: Call to undefined method App\Models\Role::findByName() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\RoleController.php:166
+Stack trace:
+#0 [internal function]: App\Controllers\RoleController->update('2')
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(139): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('RoleController', 'update', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 {main}
+
+[2026-01-28 20:42:56] Error: Call to undefined method App\Models\Role::syncFunctions() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\RoleController.php:185
+Stack trace:
+#0 [internal function]: App\Controllers\RoleController->update('2')
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(139): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('RoleController', 'update', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 {main}
+
+[2026-01-28 20:44:07] TypeError: Cannot access offset of type string on string in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Role.php:105
+Stack trace:
+#0 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Models\Role.php(127): App\Models\Role->setFunctions('2', Array)
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\RoleController.php(185): App\Models\Role->syncFunctions('2', Array)
+#2 [internal function]: App\Controllers\RoleController->update('2')
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(139): call_user_func_array(Array, Array)
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('RoleController', 'update', Array)
+#5 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#7 {main}
+

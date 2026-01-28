@@ -17,7 +17,7 @@
             <h2 class="text-xl text-[#6C757D] mb-4">找不到頁面</h2>
             <p class="text-[#6C757D] mb-8">您要找的頁面不存在或已被移除</p>
             <div class="space-x-4">
-                <a href="/" class="inline-block px-6 py-3 bg-[#4A90D9] text-white rounded-lg hover:bg-[#357ABD]">
+                <a href="<?= url('/') ?>" class="inline-block px-6 py-3 bg-[#4A90D9] text-white rounded-lg hover:bg-[#357ABD]">
                     <i class="fas fa-home mr-2"></i>返回首頁
                 </a>
                 <a href="javascript:history.back()" class="inline-block px-6 py-3 bg-[#F8F9FA] text-[#212529] rounded-lg hover:bg-[#E9ECEF] border border-[#DEE2E6]">

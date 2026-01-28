@@ -54,7 +54,7 @@ class DashboardController extends Controller
         $datetime = date('Y-m-d H:i:s', strtotime("-{$timeout} minutes"));
         
         // 使用原生 SQL 查詢
-        $sql = "SELECT COUNT(*) as count FROM AcUsers WHERE last_login_at >= :datetime AND status = 1";
+        $sql = "SELECT COUNT(*) as count FROM acusers WHERE last_login_at >= :datetime AND status = 1";
         $result = $userModel->raw($sql, ['datetime' => $datetime])->fetch();
         
         return (int) ($result['count'] ?? 0);

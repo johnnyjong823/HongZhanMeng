@@ -126,7 +126,7 @@ class ActionLog extends Model
         // 查詢資料 (含使用者資訊)
         $sql = "SELECT al.*, u.username, u.display_name 
                 FROM {$this->table} al
-                LEFT JOIN AcUsers u ON al.user_id = u.id
+                LEFT JOIN acusers u ON al.user_id = u.id
                 {$whereClause}
                 ORDER BY al.created_at DESC
                 LIMIT {$perPage} OFFSET {$offset}";
@@ -151,7 +151,7 @@ class ActionLog extends Model
     {
         $sql = "SELECT al.*, u.username, u.display_name 
                 FROM {$this->table} al
-                LEFT JOIN AcUsers u ON al.user_id = u.id
+                LEFT JOIN acusers u ON al.user_id = u.id
                 WHERE al.id = :id
                 LIMIT 1";
         
@@ -167,7 +167,7 @@ class ActionLog extends Model
         
         $sql = "SELECT al.*, u.username, u.display_name 
                 FROM {$this->table} al
-                LEFT JOIN AcUsers u ON al.user_id = u.id
+                LEFT JOIN acusers u ON al.user_id = u.id
                 {$whereClause}
                 ORDER BY al.created_at DESC
                 LIMIT {$limit}";

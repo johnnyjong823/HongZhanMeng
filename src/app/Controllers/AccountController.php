@@ -62,7 +62,7 @@ class AccountController extends Controller
             return $this->json([
                 'success' => true,
                 'message' => '登入成功',
-                'redirect' => '/admin'
+                'redirect' => url('/admin')
             ]);
         }
         
@@ -182,7 +182,7 @@ class AccountController extends Controller
         $result = $this->passwordService->resetPassword($email, $token, $password);
         
         if ($result['success']) {
-            $result['redirect'] = '/account/login';
+            $result['redirect'] = url('/account/login');
         }
         
         return $this->json($result);

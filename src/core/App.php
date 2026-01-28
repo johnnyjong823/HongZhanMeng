@@ -83,7 +83,7 @@ class App
                 
                 // 如果是後台請求，重導向到登入頁
                 if ($this->isBackendRequest()) {
-                    header('Location: /account/login?expired=1');
+                    header('Location: ' . url('/account/login?expired=1'));
                     exit;
                 }
             }

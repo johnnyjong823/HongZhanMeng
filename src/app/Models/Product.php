@@ -33,9 +33,9 @@ class Product extends Model
     public function getSystemProducts()
     {
         $sql = "SELECT p.*, 
-                       (SELECT COUNT(*) FROM ProductDetails WHERE product_id = p.id) as detail_count,
-                       (SELECT COUNT(*) FROM ProductFaqs WHERE product_id = p.id) as faq_count,
-                       (SELECT COUNT(*) FROM ProductManuals WHERE product_id = p.id) as manual_count
+                       (SELECT COUNT(*) FROM productdetails WHERE product_id = p.id) as detail_count,
+                       (SELECT COUNT(*) FROM productfaqs WHERE product_id = p.id) as faq_count,
+                       (SELECT COUNT(*) FROM productmanuals WHERE product_id = p.id) as manual_count
                 FROM {$this->table} p 
                 WHERE p.is_system = 1 
                 ORDER BY p.sort_order, p.id";
@@ -89,7 +89,7 @@ class Product extends Model
      */
     public function getImages($productId)
     {
-        $sql = "SELECT * FROM ProductImages WHERE product_id = :product_id ORDER BY sort_order, id";
+        $sql = "SELECT * FROM productimages WHERE product_id = :product_id ORDER BY sort_order, id";
         return $this->db->query($sql, ['product_id' => $productId])->fetchAll();
     }
     
@@ -98,7 +98,7 @@ class Product extends Model
      */
     public function getMainImage($productId)
     {
-        $sql = "SELECT * FROM ProductImages 
+        $sql = "SELECT * FROM productimages 
                 WHERE product_id = :product_id AND image_type = 'main' 
                 ORDER BY sort_order LIMIT 1";
         return $this->db->query($sql, ['product_id' => $productId])->fetch();
@@ -109,7 +109,7 @@ class Product extends Model
      */
     public function addImage($productId, $imagePath, $filename = null, $type = 'gallery', $sortOrder = 0)
     {
-        $sql = "INSERT INTO ProductImages (product_id, image_path, image_filename, image_type, sort_order) 
+        $sql = "INSERT INTO productimages (product_id, image_path, image_filename, image_type, sort_order) 
                 VALUES (:product_id, :image_path, :image_filename, :image_type, :sort_order)";
         
         $this->db->query($sql, [
@@ -129,7 +129,7 @@ class Product extends Model
     public function deleteImage($imageId)
     {
         // 先取得圖片資訊
-        $sql = "SELECT * FROM ProductImages WHERE id = :id";
+        $sql = "SELECT * FROM productimages WHERE id = :id";
         $image = $this->db->query($sql, ['id' => $imageId])->fetch();
         
         if ($image) {
@@ -140,7 +140,7 @@ class Product extends Model
             }
             
             // 刪除資料庫記錄
-            $sql = "DELETE FROM ProductImages WHERE id = :id";
+            $sql = "DELETE FROM productimages WHERE id = :id";
             $this->db->query($sql, ['id' => $imageId]);
         }
         
@@ -161,7 +161,7 @@ class Product extends Model
             }
         }
         
-        $sql = "DELETE FROM ProductImages WHERE product_id = :product_id";
+        $sql = "DELETE FROM productimages WHERE product_id = :product_id";
         return $this->db->query($sql, ['product_id' => $productId]);
     }
     
@@ -171,11 +171,11 @@ class Product extends Model
     public function setMainImage($productId, $imageId)
     {
         // 先將所有圖片改為 gallery
-        $sql = "UPDATE ProductImages SET image_type = 'gallery' WHERE product_id = :product_id";
+        $sql = "UPDATE productimages SET image_type = 'gallery' WHERE product_id = :product_id";
         $this->db->query($sql, ['product_id' => $productId]);
         
         // 再將指定圖片設為主圖
-        $sql = "UPDATE ProductImages SET image_type = 'main' WHERE id = :id";
+        $sql = "UPDATE productimages SET image_type = 'main' WHERE id = :id";
         return $this->db->query($sql, ['id' => $imageId]);
     }
     
@@ -184,7 +184,7 @@ class Product extends Model
      */
     public function updateImageOrder($imageId, $sortOrder)
     {
-        $sql = "UPDATE ProductImages SET sort_order = :sort_order WHERE id = :id";
+        $sql = "UPDATE productimages SET sort_order = :sort_order WHERE id = :id";
         return $this->db->query($sql, ['id' => $imageId, 'sort_order' => $sortOrder]);
     }
     

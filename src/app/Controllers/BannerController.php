@@ -146,7 +146,7 @@ class BannerController extends Controller
         
         if ($bannerId) {
             $_SESSION['flash'] = ['type' => 'success', 'message' => '輪播已新增'];
-            $this->json(['success' => true, 'message' => '輪播已新增', 'redirect' => '/admin/banners']);
+            $this->json(['success' => true, 'message' => '輪播已新增', 'redirect' => url('/admin/banners')]);
         } else {
             // 刪除已上傳的檔案
             if ($imagePath) $this->bannerModel->deleteImageFile($imagePath);
@@ -164,7 +164,7 @@ class BannerController extends Controller
         
         if (!$banner) {
             $_SESSION['flash'] = ['type' => 'error', 'message' => '找不到指定的輪播圖片'];
-            header('Location: /admin/banners');
+            header('Location: ' . url('/admin/banners'));
             exit;
         }
         
@@ -255,7 +255,7 @@ class BannerController extends Controller
         
         if ($result) {
             $_SESSION['flash'] = ['type' => 'success', 'message' => '輪播已更新'];
-            $this->json(['success' => true, 'message' => '輪播已更新', 'redirect' => '/admin/banners']);
+            $this->json(['success' => true, 'message' => '輪播已更新', 'redirect' => url('/admin/banners')]);
         } else {
             $this->json(['success' => false, 'message' => '更新失敗，請稍後再試']);
         }

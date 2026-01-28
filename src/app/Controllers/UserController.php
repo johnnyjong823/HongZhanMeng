@@ -51,9 +51,9 @@ class UserController extends Controller
         $offset = ($page - 1) * $perPage;
         
         // 查詢使用者（根據權限等級過濾）
-        $sql = "SELECT DISTINCT u.* FROM AcUsers u
-                LEFT JOIN AcUserRoles ur ON u.id = ur.user_id
-                LEFT JOIN AcRoles r ON ur.role_id = r.id
+        $sql = "SELECT DISTINCT u.* FROM acusers u
+                LEFT JOIN acuserroles ur ON u.id = ur.user_id
+                LEFT JOIN acroles r ON ur.role_id = r.id
                 WHERE {$whereClause}
                 GROUP BY u.id
                 HAVING MIN(COALESCE(r.level, 999)) > :currentLevel OR COUNT(r.id) = 0
@@ -70,9 +70,9 @@ class UserController extends Controller
         
         // 計算總數
         $countSql = "SELECT COUNT(*) as total FROM (
-                        SELECT u.id FROM AcUsers u
-                        LEFT JOIN AcUserRoles ur ON u.id = ur.user_id
-                        LEFT JOIN AcRoles r ON ur.role_id = r.id
+                        SELECT u.id FROM acusers u
+                        LEFT JOIN acuserroles ur ON u.id = ur.user_id
+                        LEFT JOIN acroles r ON ur.role_id = r.id
                         WHERE {$whereClause}
                         GROUP BY u.id
                         HAVING MIN(COALESCE(r.level, 999)) > :currentLevel OR COUNT(r.id) = 0
@@ -187,7 +187,7 @@ class UserController extends Controller
         return $this->json([
             'success' => true,
             'message' => '使用者建立成功',
-            'redirect' => '/admin/users'
+            'redirect' => url('/admin/users')
         ]);
     }
     

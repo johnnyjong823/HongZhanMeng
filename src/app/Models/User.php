@@ -47,8 +47,8 @@ class User extends Model
      */
     public function getRoles($userId)
     {
-        $sql = "SELECT r.* FROM AcRoles r
-                INNER JOIN AcUserRoles ur ON r.id = ur.role_id
+        $sql = "SELECT r.* FROM acroles r
+                INNER JOIN acuserroles ur ON r.id = ur.role_id
                 WHERE ur.user_id = :user_id AND r.status = 1
                 ORDER BY r.level";
         
@@ -60,8 +60,8 @@ class User extends Model
      */
     public function getHighestLevel($userId)
     {
-        $sql = "SELECT MIN(r.level) as level FROM AcRoles r
-                INNER JOIN AcUserRoles ur ON r.id = ur.role_id
+        $sql = "SELECT MIN(r.level) as level FROM acroles r
+                INNER JOIN acuserroles ur ON r.id = ur.role_id
                 WHERE ur.user_id = :user_id AND r.status = 1";
         
         $result = $this->db->query($sql, ['user_id' => $userId])->fetch();
@@ -82,9 +82,9 @@ class User extends Model
                     MAX(rf.can_create) as can_create,
                     MAX(rf.can_edit) as can_edit,
                     MAX(rf.can_delete) as can_delete
-                FROM AcFunctions f
-                INNER JOIN AcRoleFunctions rf ON f.id = rf.function_id
-                INNER JOIN AcUserRoles ur ON rf.role_id = ur.role_id
+                FROM acfunctions f
+                INNER JOIN acrolefunctions rf ON f.id = rf.function_id
+                INNER JOIN acuserroles ur ON rf.role_id = ur.role_id
                 WHERE ur.user_id = :user_id AND f.status = 1
                 GROUP BY f.id, f.function_code, f.function_name, f.url";
         
@@ -111,7 +111,7 @@ class User extends Model
      */
     public function assignRole($userId, $roleId, $assignedBy = null)
     {
-        $sql = "INSERT IGNORE INTO AcUserRoles (user_id, role_id, assigned_by)
+        $sql = "INSERT IGNORE INTO acuserroles (user_id, role_id, assigned_by)
                 VALUES (:user_id, :role_id, :assigned_by)";
         
         return $this->db->query($sql, [
@@ -126,7 +126,7 @@ class User extends Model
      */
     public function removeRole($userId, $roleId)
     {
-        $sql = "DELETE FROM AcUserRoles WHERE user_id = :user_id AND role_id = :role_id";
+        $sql = "DELETE FROM acuserroles WHERE user_id = :user_id AND role_id = :role_id";
         return $this->db->query($sql, [
             'user_id' => $userId,
             'role_id' => $roleId
@@ -143,7 +143,7 @@ class User extends Model
         try {
             // 刪除現有角色
             $this->db->query(
-                "DELETE FROM AcUserRoles WHERE user_id = :user_id",
+                "DELETE FROM acuserroles WHERE user_id = :user_id",
                 ['user_id' => $userId]
             );
             
@@ -165,10 +165,29 @@ class User extends Model
      */
     public function getRoleIds($userId)
     {
-        $sql = "SELECT role_id FROM AcUserRoles WHERE user_id = :user_id";
+        $sql = "SELECT role_id FROM acuserroles WHERE user_id = :user_id";
         $roles = $this->db->query($sql, ['user_id' => $userId])->fetchAll();
         
         return array_column($roles, 'role_id');
+    }
+    
+    /**
+     * 批次指派角色給使用者
+     */
+    public function assignRoles($userId, array $roleIds, $assignedBy = null)
+    {
+        foreach ($roleIds as $roleId) {
+            $this->assignRole($userId, $roleId, $assignedBy);
+        }
+        return true;
+    }
+    
+    /**
+     * 同步使用者角色 (setRoles 的別名)
+     */
+    public function syncRoles($userId, array $roleIds, $assignedBy = null)
+    {
+        return $this->setRoles($userId, $roleIds, $assignedBy);
     }
     
     /**
@@ -195,17 +214,17 @@ class User extends Model
         
         // 計算總數
         $countSql = "SELECT COUNT(DISTINCT u.id) as total
-                     FROM AcUsers u
-                     LEFT JOIN AcUserRoles ur ON u.id = ur.user_id
-                     LEFT JOIN AcRoles r ON ur.role_id = r.id
+                     FROM acusers u
+                     LEFT JOIN acuserroles ur ON u.id = ur.user_id
+                     LEFT JOIN acroles r ON ur.role_id = r.id
                      GROUP BY u.id
                      HAVING MIN(COALESCE(r.level, 999)) > :level OR MIN(r.level) IS NULL";
         
         // 由於 MySQL 限制，我們用另一種方式
         $sql = "SELECT u.*, MIN(COALESCE(r.level, 999)) as user_level
-                FROM AcUsers u
-                LEFT JOIN AcUserRoles ur ON u.id = ur.user_id
-                LEFT JOIN AcRoles r ON ur.role_id = r.id
+                FROM acusers u
+                LEFT JOIN acuserroles ur ON u.id = ur.user_id
+                LEFT JOIN acroles r ON ur.role_id = r.id
                 GROUP BY u.id
                 HAVING user_level > :level
                 ORDER BY u.created_at DESC
@@ -221,9 +240,9 @@ class User extends Model
         // 計算總數
         $totalSql = "SELECT COUNT(*) as count FROM (
                         SELECT u.id
-                        FROM AcUsers u
-                        LEFT JOIN AcUserRoles ur ON u.id = ur.user_id
-                        LEFT JOIN AcRoles r ON ur.role_id = r.id
+                        FROM acusers u
+                        LEFT JOIN acuserroles ur ON u.id = ur.user_id
+                        LEFT JOIN acroles r ON ur.role_id = r.id
                         GROUP BY u.id
                         HAVING MIN(COALESCE(r.level, 999)) > :level
                      ) as subquery";

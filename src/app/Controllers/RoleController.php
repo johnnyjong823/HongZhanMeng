@@ -98,7 +98,7 @@ class RoleController extends Controller
         return $this->json([
             'success' => true,
             'message' => '角色建立成功',
-            'redirect' => '/admin/roles'
+            'redirect' => url('/admin/roles')
         ]);
     }
     

@@ -207,7 +207,7 @@ class LoginLog extends Model
         // 查詢資料 (含使用者資訊)
         $sql = "SELECT ll.*, u.display_name 
                 FROM {$this->table} ll
-                LEFT JOIN AcUsers u ON ll.user_id = u.id
+                LEFT JOIN acusers u ON ll.user_id = u.id
                 {$whereClause}
                 ORDER BY ll.login_at DESC
                 LIMIT {$perPage} OFFSET {$offset}";
@@ -295,7 +295,7 @@ class LoginLog extends Model
         
         $sql = "SELECT ll.*, u.display_name 
                 FROM {$this->table} ll
-                LEFT JOIN AcUsers u ON ll.user_id = u.id
+                LEFT JOIN acusers u ON ll.user_id = u.id
                 {$whereClause}
                 ORDER BY ll.login_at DESC
                 LIMIT {$limit}";

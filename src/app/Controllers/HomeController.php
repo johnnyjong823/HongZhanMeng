@@ -171,7 +171,7 @@ class HomeController extends Controller
         
         // 如果找不到或狀態為停用，導向列表頁
         if (!$knowledge || $knowledge['status'] != 1) {
-            header('Location: /knowledge');
+            header('Location: ' . url('/knowledge'));
             exit;
         }
         

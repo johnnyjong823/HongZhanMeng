@@ -105,7 +105,7 @@ class CibesController extends Controller
         
         if ($itemId) {
             $_SESSION['flash'] = ['type' => 'success', 'message' => 'Cibes 品牌已新增'];
-            $this->json(['success' => true, 'message' => 'Cibes 品牌已新增', 'redirect' => '/admin/cibes']);
+            $this->json(['success' => true, 'message' => 'Cibes 品牌已新增', 'redirect' => url('/admin/cibes')]);
         } else {
             // 刪除已上傳的圖片
             if (!empty($data['image_path'])) {
@@ -124,7 +124,7 @@ class CibesController extends Controller
         
         if (!$item) {
             $_SESSION['flash'] = ['type' => 'error', 'message' => '找不到指定的 Cibes 品牌'];
-            header('Location: /admin/cibes');
+            header('Location: ' . url('/admin/cibes'));
             exit;
         }
         
@@ -189,7 +189,7 @@ class CibesController extends Controller
         
         if ($result) {
             $_SESSION['flash'] = ['type' => 'success', 'message' => 'Cibes 品牌已更新'];
-            $this->json(['success' => true, 'message' => 'Cibes 品牌已更新', 'redirect' => '/admin/cibes']);
+            $this->json(['success' => true, 'message' => 'Cibes 品牌已更新', 'redirect' => url('/admin/cibes')]);
         } else {
             $this->json(['success' => false, 'message' => '更新失敗，請稍後再試']);
         }
