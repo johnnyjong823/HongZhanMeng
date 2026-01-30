@@ -120,6 +120,29 @@ class Knowledge extends Model
     }
     
     /**
+     * 取得前台顯示的知識分享（帶 offset）
+     */
+    public function getActiveKnowledgeWithOffset(int $offset = 0, int $limit = 6): array
+    {
+        $sql = "SELECT * FROM {$this->table} 
+                WHERE status = 1 
+                ORDER BY is_pinned DESC, sort_order ASC, created_at DESC 
+                LIMIT :limit OFFSET :offset";
+        
+        return $this->db->query($sql, ['limit' => $limit, 'offset' => $offset])->fetchAll();
+    }
+    
+    /**
+     * 計算已啟用的知識分享總數
+     */
+    public function countActive(): int
+    {
+        $sql = "SELECT COUNT(*) as count FROM {$this->table} WHERE status = 1";
+        $result = $this->db->query($sql)->fetch();
+        return (int)$result['count'];
+    }
+    
+    /**
      * 依類別取得知識分享
      */
     public function getByCategory(string $category, bool $activeOnly = true): array

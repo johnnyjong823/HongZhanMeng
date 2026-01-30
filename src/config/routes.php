@@ -91,6 +91,13 @@ return [
     ],
     [
         'method' => 'GET',
+        'path' => '/knowledge/load-more',
+        'controller' => 'HomeController',
+        'action' => 'knowledgeLoadMore',
+        'middleware' => []
+    ],
+    [
+        'method' => 'GET',
         'path' => '/knowledge/{id}',
         'controller' => 'HomeController',
         'action' => 'knowledgeDetail',
@@ -653,6 +660,13 @@ return [
         'path' => '/admin/knowledge/toggle-pinned/{id}',
         'controller' => 'KnowledgeController',
         'action' => 'togglePinned',
+        'middleware' => [AuthMiddleware::class]
+    ],
+    [
+        'method' => 'POST',
+        'path' => '/admin/knowledge/upload-editor-image',
+        'controller' => 'KnowledgeController',
+        'action' => 'uploadEditorImage',
         'middleware' => [AuthMiddleware::class]
     ],
     

@@ -14,7 +14,7 @@
                     <?php endif; ?>
                     <div class="hero-mark-wrapper">
                         <img src="<?= asset('images/frontend/hero-mark.jpg') ?>" alt="Hero Mark" class="hero-mark">
-                        <a href="#about" class="btn-read-more">Read More ></a>
+                        <a href="<?= url('/knowledge/4') ?>" class="btn-read-more">Read More ></a>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -26,14 +26,14 @@
                     </video>
                     <div class="hero-mark-wrapper">
                         <img src="<?= asset('images/frontend/hero-mark.jpg') ?>" alt="Hero Mark" class="hero-mark">
-                        <a href="#about" class="btn-read-more">Read More ></a>
+                        <a href="<?= url('/knowledge/4') ?>" class="btn-read-more">Read More ></a>
                     </div>
                 </div>
                 <div class="hero-slide" data-index="1">
                     <img src="<?= asset('images/frontend/hero-bg.png') ?>" alt="Cibes 愛升達家用電梯" class="hero-image">
                     <div class="hero-mark-wrapper">
                         <img src="<?= asset('images/frontend/hero-mark.jpg') ?>" alt="Hero Mark" class="hero-mark">
-                        <a href="#about" class="btn-read-more">Read More ></a>
+                        <a href="<?= url('/knowledge/4') ?>" class="btn-read-more">Read More ></a>
                     </div>
                 </div>
             <?php endif; ?>

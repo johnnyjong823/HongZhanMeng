@@ -1,5 +1,9 @@
 <?php $currentPage = 'knowledge'; ?>
 
+<!-- TinyMCE Editor -->
+<script src="https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.jsdelivr.net/npm/tinymce@6/langs/zh_TW.min.js"></script>
+
 <!-- Header -->
 <div class="flex items-center mb-6">
     <a href="<?= url('/admin/knowledge') ?>" class="text-[#6C757D] hover:text-[#212529] mr-4">
@@ -53,7 +57,7 @@
                             知識內容
                         </label>
                         <textarea id="content" name="content" rows="10"
-                                  class="w-full px-4 py-2 border border-[#DEE2E6] rounded-lg focus:ring-2 focus:ring-[#4A90D9] focus:border-[#4A90D9] text-[#212529]"
+                                  class="tinymce-editor w-full px-4 py-2 border border-[#DEE2E6] rounded-lg focus:ring-2 focus:ring-[#4A90D9] focus:border-[#4A90D9] text-[#212529]"
                                   placeholder="請輸入知識內容（選填）"></textarea>
                     </div>
                 </div>
@@ -173,6 +177,64 @@
 </form>
 
 <script>
+    // TinyMCE 初始化
+    tinymce.init({
+        selector: '.tinymce-editor',
+        language: 'zh_TW',
+        height: 400,
+        menubar: false,
+        plugins: [
+            'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+            'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+            'insertdatetime', 'media', 'table', 'help', 'wordcount'
+        ],
+        toolbar: 'undo redo | blocks | ' +
+            'bold italic forecolor backcolor | alignleft aligncenter ' +
+            'alignright alignjustify | bullist numlist outdent indent | ' +
+            'link image media | removeformat | code | help',
+        content_style: 'body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 14px; line-height: 1.6; }',
+        branding: false,
+        promotion: false,
+        convert_urls: false,
+        relative_urls: false,
+        remove_script_host: false,
+        // 允許 style 標籤和屬性
+        valid_elements: '*[*]',
+        extended_valid_elements: 'style[type],script[src|type]',
+        custom_elements: 'style',
+        verify_html: false,
+        // 圖片上傳設定（上傳到伺服器）
+        images_upload_url: '<?= url('/admin/knowledge/upload-editor-image') ?>',
+        images_upload_handler: function (blobInfo, progress) {
+            return new Promise((resolve, reject) => {
+                const formData = new FormData();
+                formData.append('file', blobInfo.blob(), blobInfo.filename());
+                
+                fetch('<?= url('/admin/knowledge/upload-editor-image') ?>', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(result => {
+                    if (result.success && result.location) {
+                        resolve(result.location);
+                    } else {
+                        reject(result.message || '圖片上傳失敗');
+                    }
+                })
+                .catch(error => {
+                    reject('圖片上傳失敗: ' + error.message);
+                });
+            });
+        },
+        automatic_uploads: true,
+        setup: function(editor) {
+            editor.on('change', function() {
+                tinymce.triggerSave();
+            });
+        }
+    });
+
     // 圖片上傳處理
     const uploadArea = document.getElementById('image-upload-area');
     const fileInput = document.getElementById('image');
@@ -259,6 +321,9 @@
     // 表單提交
     document.getElementById('knowledge-form').addEventListener('submit', async function(e) {
         e.preventDefault();
+        
+        // 確保 TinyMCE 內容同步到 textarea
+        tinymce.triggerSave();
         
         const submitBtn = document.getElementById('submit-btn');
         submitBtn.disabled = true;

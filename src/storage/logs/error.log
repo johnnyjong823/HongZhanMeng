@@ -543,3 +543,12 @@ Stack trace:
 #6 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
 #7 {main}
 
+[2026-01-30 18:05:33] Error: Call to undefined function App\Controllers\finfo_open() in D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\app\Controllers\KnowledgeController.php:317
+Stack trace:
+#0 [internal function]: App\Controllers\KnowledgeController->uploadEditorImage()
+#1 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(139): call_user_func_array(Array, Array)
+#2 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\Router.php(48): Core\Router->callController('KnowledgeContro...', 'uploadEditorIma...', Array)
+#3 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\core\App.php(130): Core\Router->dispatch()
+#4 D:\MyWork\必加廣告\6.鴻展盟\專案\HongZhanMeng2\src\public\index.php(62): Core\App->run()
+#5 {main}
+

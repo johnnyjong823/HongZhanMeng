@@ -4095,7 +4095,6 @@ a.footer-link:hover {
 /* Full Width Banner Image */
 .knowledge-detail-banner {
     width: 100%;
-    margin-top: var(--header-height);
 }
 
 .knowledge-detail-banner img {

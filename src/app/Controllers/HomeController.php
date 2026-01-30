@@ -10,7 +10,7 @@ use App\Models\ProductFaq;
 
 class HomeController extends Controller
 {
-    protected $skipActionFilter = ['index', 'about', 'contact', 'productsAscenda', 'productsDimensions', 'productsSpecs', 'productsFaq', 'aboutHongZhanMeng', 'aboutCibes', 'knowledge', 'knowledgeDetail', 'contactPage'];
+    protected $skipActionFilter = ['index', 'about', 'contact', 'productsAscenda', 'productsDimensions', 'productsSpecs', 'productsFaq', 'aboutHongZhanMeng', 'aboutCibes', 'knowledge', 'knowledgeDetail', 'knowledgeLoadMore', 'contactPage'];
     
     private Knowledge $knowledgeModel;
     private Banner $bannerModel;
@@ -158,8 +158,14 @@ class HomeController extends Controller
      */
     public function knowledge()
     {
-        // 取得所有已啟用的知識分享
-        $knowledgeList = $this->knowledgeModel->getActiveKnowledge(50);
+        // 每頁顯示數量
+        $perPage = 6;
+        
+        // 取得前6筆已啟用的知識分享
+        $knowledgeList = $this->knowledgeModel->getActiveKnowledge($perPage);
+        
+        // 取得總筆數
+        $totalCount = $this->knowledgeModel->countActive();
         
         // 取得類別對應表
         $codeDefModel = new CodeDef();
@@ -169,8 +175,36 @@ class HomeController extends Controller
             'title' => '知識分享｜Ascenda 愛升達家用電梯',
             'description' => '探索家用電梯的專業知識與生活美學分享。',
             'knowledgeList' => $knowledgeList,
-            'categories' => $categories
+            'categories' => $categories,
+            'totalCount' => $totalCount,
+            'perPage' => $perPage
         ], 'frontend');
+    }
+    
+    /**
+     * 知識分享 AJAX 載入更多
+     */
+    public function knowledgeLoadMore()
+    {
+        $offset = (int)($_GET['offset'] ?? 0);
+        $limit = (int)($_GET['limit'] ?? 6);
+        
+        // 取得更多知識分享
+        $knowledgeList = $this->knowledgeModel->getActiveKnowledgeWithOffset($offset, $limit);
+        
+        // 取得總筆數
+        $totalCount = $this->knowledgeModel->countActive();
+        
+        // 計算是否還有更多
+        $hasMore = ($offset + count($knowledgeList)) < $totalCount;
+        
+        return $this->json([
+            'success' => true,
+            'data' => $knowledgeList,
+            'hasMore' => $hasMore,
+            'totalCount' => $totalCount,
+            'loadedCount' => $offset + count($knowledgeList)
+        ]);
     }
     
     /**

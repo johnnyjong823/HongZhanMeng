@@ -24,7 +24,7 @@
         
         <!-- 內容 -->
         <div class="knowledge-detail-body">
-            <?= $knowledge['content'] ?>
+            <?= safe_html($knowledge['content']) ?>
         </div>
         
         <!-- 返回按鈕 -->

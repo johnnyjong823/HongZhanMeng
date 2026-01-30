@@ -298,4 +298,67 @@ class KnowledgeController extends Controller
         $result = $this->knowledgeModel->togglePinned($id);
         $this->json($result);
     }
+    
+    /**
+     * 編輯器圖片上傳
+     */
+    public function uploadEditorImage(): void
+    {
+        // 檢查是否有上傳檔案
+        if (empty($_FILES['file']) || $_FILES['file']['error'] !== UPLOAD_ERR_OK) {
+            $this->json(['success' => false, 'message' => '請選擇要上傳的圖片']);
+            return;
+        }
+        
+        $file = $_FILES['file'];
+        
+        // 驗證檔案類型（透過副檔名和 MIME type）
+        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+        $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+        
+        // 取得副檔名
+        $extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+        
+        // 檢查副檔名
+        if (!in_array($extension, $allowedExtensions)) {
+            $this->json(['success' => false, 'message' => '只允許上傳 JPG、PNG、GIF、WEBP 格式的圖片']);
+            return;
+        }
+        
+        // 檢查 MIME type（使用 getimagesize 更可靠）
+        $imageInfo = @getimagesize($file['tmp_name']);
+        if ($imageInfo === false || !in_array($imageInfo['mime'], $allowedTypes)) {
+            $this->json(['success' => false, 'message' => '檔案不是有效的圖片格式']);
+            return;
+        }
+        
+        // 驗證檔案大小 (最大 5MB)
+        $maxSize = 5 * 1024 * 1024;
+        if ($file['size'] > $maxSize) {
+            $this->json(['success' => false, 'message' => '圖片大小不能超過 5MB']);
+            return;
+        }
+        
+        // 建立上傳目錄
+        $uploadDir = ROOT_PATH . '/public/uploads/knowledge/editor';
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+        
+        // 生成唯一檔名
+        $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+        $filename = 'editor_' . date('YmdHis') . '_' . uniqid() . '.' . strtolower($extension);
+        $filepath = $uploadDir . '/' . $filename;
+        
+        // 移動上傳檔案
+        if (move_uploaded_file($file['tmp_name'], $filepath)) {
+            $imageUrl = url('/uploads/knowledge/editor/' . $filename);
+            $this->json([
+                'success' => true,
+                'location' => $imageUrl
+            ]);
+        } else {
+            $this->json(['success' => false, 'message' => '圖片上傳失敗，請稍後再試']);
+        }
+    }
 }

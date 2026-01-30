@@ -28,7 +28,7 @@
                 <p>目前暫無知識分享內容，敬請期待！</p>
             </div>
         <?php else: ?>
-            <div class="knowledge-grid">
+            <div class="knowledge-grid" id="knowledge-grid">
                 <?php foreach ($knowledgeList as $item): ?>
                     <a href="<?= url('/knowledge/' . $item['id']) ?>" class="knowledge-card">
                         <div class="knowledge-card-image">
@@ -44,6 +44,88 @@
                     </a>
                 <?php endforeach; ?>
             </div>
+            
+            <?php if ($totalCount > $perPage): ?>
+            <div class="knowledge-load-more-wrapper" id="load-more-wrapper">
+                <button type="button" class="btn-load-more" id="btn-load-more" data-offset="<?= $perPage ?>" data-limit="<?= $perPage ?>">
+                    查看更多 <span class="arrow">&gt;</span>
+                </button>
+            </div>
+            <?php endif; ?>
         <?php endif; ?>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const btnLoadMore = document.getElementById('btn-load-more');
+    const knowledgeGrid = document.getElementById('knowledge-grid');
+    const loadMoreWrapper = document.getElementById('load-more-wrapper');
+    
+    if (!btnLoadMore) return;
+    
+    btnLoadMore.addEventListener('click', function() {
+        const offset = parseInt(this.dataset.offset);
+        const limit = parseInt(this.dataset.limit);
+        
+        // 顯示載入中
+        this.disabled = true;
+        this.innerHTML = '載入中...';
+        
+        fetch(`<?= url('/knowledge/load-more') ?>?offset=${offset}&limit=${limit}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && data.data.length > 0) {
+                    // 新增卡片
+                    data.data.forEach(item => {
+                        const card = document.createElement('a');
+                        card.href = `<?= url('/knowledge/') ?>${item.id}`;
+                        card.className = 'knowledge-card';
+                        
+                        const imagePath = item.image_path 
+                            ? `<?= url('') ?>${item.image_path}`
+                            : `<?= asset('images/frontend/knowledge-default.jpg') ?>`;
+                        
+                        card.innerHTML = `
+                            <div class="knowledge-card-image">
+                                <img src="${imagePath}" alt="${escapeHtml(item.title)}">
+                            </div>
+                            <div class="knowledge-card-content">
+                                <h3 class="knowledge-card-title">${escapeHtml(item.title)}</h3>
+                            </div>
+                        `;
+                        
+                        knowledgeGrid.appendChild(card);
+                    });
+                    
+                    // 更新 offset
+                    btnLoadMore.dataset.offset = offset + data.data.length;
+                    
+                    // 如果沒有更多資料，隱藏按鈕
+                    if (!data.hasMore) {
+                        loadMoreWrapper.style.display = 'none';
+                    } else {
+                        // 恢復按鈕狀態
+                        btnLoadMore.disabled = false;
+                        btnLoadMore.innerHTML = '查看更多 <span class="arrow">&gt;</span>';
+                    }
+                } else {
+                    // 沒有更多資料
+                    loadMoreWrapper.style.display = 'none';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btnLoadMore.disabled = false;
+                btnLoadMore.innerHTML = '查看更多 <span class="arrow">&gt;</span>';
+            });
+    });
+    
+    // HTML 跳脫函式
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+});
+</script>

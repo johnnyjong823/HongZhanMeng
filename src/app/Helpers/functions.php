@@ -382,3 +382,44 @@ function status_badge($status)
         return '<span class="badge bg-secondary">停用</span>';
     }
 }
+
+/**
+ * 安全輸出 HTML 內容
+ * 過濾危險標籤（如 script, iframe, object 等）
+ * 保留安全的格式化標籤
+ * 
+ * @param string $html HTML 內容
+ * @return string 過濾後的 HTML
+ */
+function safe_html($html)
+{
+    if (empty($html)) {
+        return '';
+    }
+    
+    // 允許的 HTML 標籤
+    $allowedTags = '<p><br><strong><b><em><i><u><s><strike><del><ins>' .
+                   '<h1><h2><h3><h4><h5><h6><a><ul><ol><li><blockquote>' .
+                   '<pre><code><hr><table><thead><tbody><tfoot><tr><th><td>' .
+                   '<img><figure><figcaption><div><span><sub><sup>' .
+                   '<address><article><aside><details><summary><section><style>';
+    
+    // 移除不允許的標籤
+    $html = strip_tags($html, $allowedTags);
+    
+    // 移除 JavaScript 事件屬性（如 onclick, onerror 等）
+    $html = preg_replace('/\s*on\w+\s*=\s*(["\'])[^"\']*\1/i', '', $html);
+    $html = preg_replace('/\s*on\w+\s*=\s*[^\s>]*/i', '', $html);
+    
+    // 移除 javascript: 協議
+    $html = preg_replace('/href\s*=\s*(["\'])\s*javascript:[^"\']*\1/i', 'href=$1#$1', $html);
+    $html = preg_replace('/src\s*=\s*(["\'])\s*javascript:[^"\']*\1/i', 'src=$1#$1', $html);
+    
+    // 移除 data: 協議（在 src 中，可用於 XSS）
+    $html = preg_replace('/src\s*=\s*(["\'])\s*data:[^"\']*\1/i', 'src=$1#$1', $html);
+    
+    // 移除 style 屬性中的 expression() 和 url() 可能的危險內容
+    $html = preg_replace('/style\s*=\s*(["\'])[^"\']*expression\s*\([^)]*\)[^"\']*\1/i', '', $html);
+    
+    return $html;
+}
