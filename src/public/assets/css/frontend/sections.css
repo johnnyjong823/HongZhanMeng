@@ -969,7 +969,7 @@
 }
 
 .instruction-card-title {
-    font-size: var(--text-lg);
+    font-size: var(--text-2xl);
     font-weight: var(--font-bold);
     color: #000000;
     line-height: 1.4;
@@ -986,7 +986,7 @@
 }
 
 .instruction-card-desc {
-    font-size: var(--text-sm);
+    font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
     color: var(--color-gray-700);
     flex: 1;
@@ -1007,9 +1007,10 @@
     align-self: flex-end;
     transition: color var(--transition-fast);
     border: 1px solid var(--color-gray-400);
-    padding: var(--space-1) var(--space-3);
-    border-radius: var(--border-radius-sm);
+    padding: 0 var(--space-3);
+    border-radius: var(--border-radius-full);
     margin-top: auto;
+    background-color: #FFF;
 }
 
 .instruction-card:hover .instruction-card-more {
@@ -2360,7 +2361,7 @@ a.footer-link:hover {
 /* Full Width Banner */
 .about-banner {
     width: 100%;
-    height: 300px;
+    height: 450px;
     position: relative;
     overflow: hidden;
     margin-top: var(--header-height);
@@ -3582,7 +3583,7 @@ a.footer-link:hover {
 .sustainability-content {
     position: relative;
     z-index: 3;
-    padding: var(--space-16) var(--container-padding);
+    padding: var(--space-16) var(--container-padding) 0 var(--container-padding);
     max-width: 700px;
     color: var(--color-white);
 }
@@ -3749,6 +3750,7 @@ a.footer-link:hover {
 }
 
 .cibes-value-chain-image {
+    padding:0 var(--container-padding) var(--space-16) var(--container-padding);
     width: 100%;
 }
 
@@ -3779,7 +3781,7 @@ a.footer-link:hover {
 /* Banner Section */
 .knowledge-banner {
     width: 100%;
-    height: 350px;
+    height: 450px;
     position: relative;
     overflow: hidden;
     margin-top: var(--header-height);
@@ -4205,7 +4207,7 @@ a.footer-link:hover {
 /* Banner Section */
 .contact-page-banner {
     width: 100%;
-    height: 350px;
+    height: 450px;
     position: relative;
     overflow: hidden;
     margin-top: var(--header-height);

@@ -39,21 +39,20 @@
             <!-- 中間圖片 -->
             <div class="elevator-image-container">
                 <img src="<?= asset('images/products/ascenda-elevator.jpg') ?>" alt="Ascenda 電梯外觀">
-            </div>
-            
-            <!-- 熱點組合 1: 右側 - 智慧照明系統 -->
-            <div class="hotspot-group right" style="top: 15%;left: 70%;">
+                <!-- 熱點組合 1: 右側 - 智慧照明系統 -->
+            <div class="hotspot-group right" style="top: 15%;left: 100%;">
                 <div class="hotspot-dot" style=""></div>
                 <div class="hotspot-connector"></div> 
                 <div class="hotspot-info">
                     <h4 class="hotspot-info-title">創新艙口蓋板系統</h4>
                     <p class="hotspot-info-desc">當電梯下降至下層停止點時,艙口蓋板會滑入上層地板,完全覆蓋電梯井口,讓您可以自由地在空間中走動。</p>
+                    <img src="<?= asset('images/products/hotspot01.png') ?>" alt="艙口蓋板系統" class="hotspot-info-img" style="width: 100%; margin-top: 10px;">
                 </div>
                                
             </div>
 
             <!-- 熱點組合 2: 左側 - 人體工學扶手 -->
-            <div class="hotspot-group left" style="top: 31%;left: 15%;">
+            <div class="hotspot-group left" style="top: 31%;right: 100%;">
                 <div class="hotspot-info">
                     <h4 class="hotspot-info-title">扶手控制和内裝座椅</h4>
                     <p class="hotspot-info-desc">只需將手放在扶手上,即可啟動電梯,享受舒適旅程,移動間還可放下座椅休息。</p>
@@ -63,7 +62,7 @@
             </div>
             
             <!-- 熱點組合 3: 右側 - 全景玻璃門 -->
-            <div class="hotspot-group right" style="top: 36%;left: 66%;">
+            <div class="hotspot-group right" style="top: 36%;left: 100%;">
                 <div class="hotspot-dot" style=""></div>
                 <div class="hotspot-connector" style="width:200px"></div>
                 <div class="hotspot-info">
@@ -73,7 +72,7 @@
             </div>
             
             <!-- 熱點組合 4: 左側 - 人體工學扶手 -->
-            <div class="hotspot-group left" style="top: 45%;left: 16%;">
+            <div class="hotspot-group left" style="top: 45%;right: 100%;">
                 <div class="hotspot-info">
                     <h4 class="hotspot-info-title">轎底安全觸板</h4>
                     <p class="hotspot-info-desc">當電梯運作時,如有任何東西進入電梯下面,一但觸及安全板,電梯將自動停止。</p>
@@ -83,7 +82,7 @@
             </div>
             
             <!-- 熱點組合 5: 右側 - 防滑地板 -->
-            <div class="hotspot-group right" style="top: 50%;left: 65%;">
+            <div class="hotspot-group right" style="top: 50%;left: 100%;">
                 <div class="hotspot-dot" style=""></div>
                 <div class="hotspot-connector" style="width:224px"></div>
                 <div class="hotspot-info">
@@ -91,6 +90,9 @@
                     <p class="hotspot-info-desc">搭載了EcoSilent驅動系統,將運行能耗與聲音降至極低,保證絕對的安全與穩固。</p>
                 </div>
             </div>
+            </div>
+            
+            
         </div>
     </div>
 </section>

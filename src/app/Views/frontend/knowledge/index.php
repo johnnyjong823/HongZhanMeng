@@ -1,9 +1,8 @@
 <!-- Full Width Banner -->
 <section class="knowledge-banner">
     <div class="knowledge-banner-background">
-        <img src="<?= asset('images/products/banner1.jpg') ?>" alt="知識分享">
+        <img src="<?= asset('images/knowledge/banner.jpg') ?>" alt="知識分享">
     </div>
-    <div class="knowledge-banner-overlay"></div>
 </section>
 
 <!-- Intro Section - 左內容右標題 -->

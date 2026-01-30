@@ -1,9 +1,8 @@
 <!-- Full Width Banner -->
 <section class="contact-page-banner">
     <div class="contact-page-banner-background">
-        <img src="<?= asset('images/products/banner1.jpg') ?>" alt="聯繫我們">
+        <img src="<?= asset('images/contact/banner.jpg') ?>" alt="聯繫我們">
     </div>
-    <div class="contact-page-banner-overlay"></div>
 </section>
 
 <!-- Intro Section - 左內容右標題 -->
@@ -26,7 +25,7 @@
 <section class="contact-details-section">
     <div class="contact-details-visual">
         <div class="contact-details-image">
-            <img src="<?= asset('images/about/bg01.jpg') ?>" alt="五感體驗">
+            <img src="<?= asset('images/contact/image1.jpg') ?>" alt="五感體驗">
         </div>
     </div>
     <div class="container">
@@ -47,7 +46,7 @@
 <section class="contact-details-section reverse">
     <div class="contact-details-visual">
         <div class="contact-details-image">
-            <img src="<?= asset('images/about/bg01.jpg') ?>" alt="理解您對家的想像">
+            <img src="<?= asset('images/contact/image2.jpg') ?>" alt="理解您對家的想像">
         </div>
     </div>
     <div class="container" style="max-width: 100%;">

@@ -1,7 +1,7 @@
 <!-- Full Width Banner -->
 <section class="about-banner">
     <div class="about-banner-background">
-        <img src="<?= asset('images/products/banner1.jpg') ?>" alt="背景">
+        <img src="<?= asset('images/about/banner.jpg') ?>" alt="背景">
     </div>
 </section>
 

@@ -86,7 +86,7 @@
 <!-- Sustainability Section - 永續性 -->
 <section class="sustainability-section">
     <div class="sustainability-background">
-        <img src="<?= asset('images/frontend/cibes/sustainability-bg.jpg') ?>" alt="永續發展">
+        <img src="<?= asset('images/cibes/永續發展.jpg') ?>" alt="永續發展">
     </div>
     <div class="sustainability-overlay"></div>
     <div class="sustainability-content">
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <div class="cibes-content-image">
-                <img src="<?= asset('images/frontend/cibes/circular-economy.jpg') ?>" alt="循環經濟">
+                <img src="<?= asset('images/cibes/循環經濟.png') ?>" alt="循環經濟">
             </div>
         </div>
     </div>
@@ -120,7 +120,7 @@
     <div class="container">
         <div class="cibes-content-wrapper" style="grid-template-columns: 1.4fr 1fr;">
             <div class="cibes-content-image">
-                <img src="<?= asset('images/frontend/cibes/carbon-reduction.jpg') ?>" alt="減少溫室氣體排放">
+                <img src="<?= asset('images/cibes/減少溫室氣體排放.png') ?>" alt="減少溫室氣體排放">
             </div>
             <div class="cibes-content-text">
                 <h2 class="cibes-content-title">減少溫室氣體排放</h2>
@@ -146,6 +146,6 @@
         </div>
     </div>
     <div class="cibes-value-chain-image">
-        <img src="<?= asset('images/frontend/cibes/value-chain.jpg') ?>" alt="價值鏈中的道德與責任">
+        <img src="<?= asset('images/cibes/價值鏈中的道德與責任.png') ?>" alt="價值鏈中的道德與責任">
     </div>
 </section>

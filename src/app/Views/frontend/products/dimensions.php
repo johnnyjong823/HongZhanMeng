@@ -162,38 +162,52 @@
         <!-- 技術資源區塊 -->
         <div class="tech-resources-grid">
             <div class="tech-resource-item">
-                <h3 class="tech-resource-title">產品型錄</h3>
-                <p class="tech-resource-subtitle">Product Catalog</p>
+                <h3 class="tech-resource-title">SGS-TÜV Saar GmbH</h3>
+                <p class="tech-resource-subtitle">安全認證</p>
                 <div class="tech-resource-image">
-                    <img src="<?= asset('images/frontend/tech-catalog.jpg') ?>" alt="產品型錄">
+                    <img src="<?= asset('images/products/SGS-TÜV Saar GmbH安全認證.jpg') ?>" alt="安全認證">
                 </div>
             </div>
             <div class="tech-resource-item">
-                <h3 class="tech-resource-title">安裝指南</h3>
-                <p class="tech-resource-subtitle">Installation Guide</p>
+                <h3 class="tech-resource-title">EC Type Examination Certificate</h3>
+                <p class="tech-resource-subtitle">歐盟機械指令證書</p>
                 <div class="tech-resource-image">
-                    <img src="<?= asset('images/frontend/tech-installation.jpg') ?>" alt="安裝指南">
+                    <img src="<?= asset('images/products/歐盟機械指令證書.jpg') ?>" alt="歐盟機械指令證書">
                 </div>
             </div>
             <div class="tech-resource-item">
-                <h3 class="tech-resource-title">尺寸規格</h3>
-                <p class="tech-resource-subtitle">Dimensions & Specs</p>
+                <h3 class="tech-resource-title">Authorization to Mark</h3>
+                <p class="tech-resource-subtitle">美國機械指令證書</p>
                 <div class="tech-resource-image">
-                    <img src="<?= asset('images/frontend/tech-dimensions.jpg') ?>" alt="尺寸規格">
+                    <img src="<?= asset('images/products/Authorization to Mark（授權使用認證標誌）.jpg') ?>" alt="美國機械指令證書">
                 </div>
             </div>
             <div class="tech-resource-item">
-                <h3 class="tech-resource-title">維護手冊</h3>
-                <p class="tech-resource-subtitle">Maintenance Manual</p>
+                <h3 class="tech-resource-title">EC Declaration of Conformity</h3>
+                <p class="tech-resource-subtitle">歐盟EC 合格聲明</p>
                 <div class="tech-resource-image">
-                    <img src="<?= asset('images/frontend/tech-maintenance.jpg') ?>" alt="維護手冊">
+                    <img src="<?= asset('images/products/歐盟EC 合格聲明.jpg') ?>" alt="歐盟EC 合格聲明">
                 </div>
             </div>
             <div class="tech-resource-item">
-                <h3 class="tech-resource-title">安全認證</h3>
-                <p class="tech-resource-subtitle">Safety Certification</p>
+                <h3 class="tech-resource-title"></h3>
+                <p class="tech-resource-subtitle">合格 報告</p>
                 <div class="tech-resource-image">
-                    <img src="<?= asset('images/frontend/tech-certification.jpg') ?>" alt="安全認證">
+                    <img src="<?= asset('images/products/合格報告.jpg') ?>" alt="合格報告">
+                </div>
+            </div>
+            <div class="tech-resource-item">
+                <h3 class="tech-resource-title">Authorization to Mark</h3>
+                <p class="tech-resource-subtitle">ETL 安全認證標誌使用授權</p>
+                <div class="tech-resource-image">
+                    <img src="<?= asset('images/products/ETL 安全認證標誌使用授權.jpg') ?>" alt="ETL 安全認證標誌使用授權">
+                </div>
+            </div>
+            <div class="tech-resource-item">
+                <h3 class="tech-resource-title">2025 iF Design Award</h3>
+                <p class="tech-resource-subtitle">德國 iF 品設計獎</p>
+                <div class="tech-resource-image">
+                    <img src="<?= asset('images/products/2025 年德國 iF Design Award.jpg') ?>" alt="德國 iF 品設計獎">
                 </div>
             </div>
         </div>
