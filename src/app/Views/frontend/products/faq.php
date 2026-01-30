@@ -2,9 +2,9 @@
 <section class="faq-section faq-page" id="product-faq">
     <div class="container">
         <div class="faq-page-header">
-            <span class="faq-tag">FAQ</span>
-            <h1 class="faq-page-title">常見問題</h1>
-            <p class="faq-page-desc">關於 Ascenda 愛升達家用電梯的常見問題解答，若有其他疑問歡迎直接聯繫我們。</p>
+            <span class="faq-tag">FAQ & Installation Guide</span>
+            <h1 class="faq-page-title">常見疑問與安裝須知</h1>
+            <p class="faq-page-desc"></p>
         </div>
         
         <?php if (!empty($faqs)): ?>
@@ -25,7 +25,8 @@
                         <h4><?= htmlspecialchars($faq['question']) ?></h4>
                     </div>
                     <div class="faq-answer">
-                        <?= nl2br(htmlspecialchars($faq['answer'])) ?>
+                        <span class="faq-answer-mark">A</span>
+                        <div class="faq-answer-content"><?= nl2br(htmlspecialchars($faq['answer'])) ?></div>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -40,7 +41,8 @@
                         <h4><?= htmlspecialchars($faq['question']) ?></h4>
                     </div>
                     <div class="faq-answer">
-                        <?= nl2br(htmlspecialchars($faq['answer'])) ?>
+                        <span class="faq-answer-mark">A</span>
+                        <div class="faq-answer-content"><?= nl2br(htmlspecialchars($faq['answer'])) ?></div>
                     </div>
                 </div>
                 <?php endforeach; ?>
