@@ -4,10 +4,6 @@
         <img src="<?= asset('images/products/banner1.jpg') ?>" alt="知識分享">
     </div>
     <div class="knowledge-banner-overlay"></div>
-    <div class="knowledge-banner-content">
-        <p class="knowledge-banner-label">KNOWLEDGE</p>
-        <h1 class="knowledge-banner-title">知識分享</h1>
-    </div>
 </section>
 
 <!-- Intro Section - 左內容右標題 -->

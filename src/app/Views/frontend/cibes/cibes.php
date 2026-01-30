@@ -1,7 +1,7 @@
 <!-- Full Width Banner -->
 <section class="about-banner">
     <div class="about-banner-background">
-        <img src="<?= asset('images/frontend/Cibes 瑞典工廠.jpg') ?>" alt="關於 Cibes">
+        <img src="<?= asset('images/cibes/banner.png') ?>" alt="關於 Cibes">
     </div>
 </section>
 
@@ -17,13 +17,6 @@
                 <p class="about-intro-subtitle">SWEDISH HERITAGE</p>
             </div>
         </div>
-        
-        <!-- 下方說明文字 -->
-        <div style="margin-top: 60px; max-width: 900px;">
-            <p class="about-intro-desc">
-                時至今日，瑞典依然是 Cibes 的靈魂所在。儘管已然發展成為一家業務遍及全球的國際電梯公司，但我們的心仍然深深紮根於瑞典這片土地，秉持著相同的願景與價值。
-            </p>
-        </div>
     </div>
 </section>
 
@@ -33,72 +26,58 @@
         <div class="cibes-features-grid">
             <!-- 卡片 1: 瑞典根源 -->
             <div class="cibes-feature-card light">
-                <div class="cibes-feature-content">
-                    <h3 class="cibes-feature-title">瑞典根源</h3>
-                    <div class="cibes-feature-divider"></div>
-                    <p class="cibes-feature-desc">我們是一家全球公司，但我們的總部與主要工廠仍設置在瑞典，這樣深植於瑞典的精神，將定義與塑造我們的靈魂。</p>
+                <div class="cibes-feature-header">
+                    <div class="cibes-feature-title-wrapper">
+                        <h3 class="cibes-feature-title">瑞典根源</h3>
+                        <div class="cibes-feature-divider"></div>
+                    </div>
+                    <div class="cibes-feature-icon">
+                        <img src="<?= asset('images/cibes/icon1.png') ?>" alt="瑞典根源">
+                    </div>
                 </div>
-                <div class="cibes-feature-icon">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M2 12h20"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        <path d="M4.93 4.93l14.14 14.14"/>
-                        <path d="M19.07 4.93L4.93 19.07"/>
-                    </svg>
-                </div>
+                <p class="cibes-feature-desc">我們是一家全球公司，但我們的總部與主要工廠仍設置在瑞典，這樣深植於瑞典的精神，將定義與塑造我們的靈魂。</p>
             </div>
             
             <!-- 卡片 2: 創新電梯公司 -->
             <div class="cibes-feature-card dark">
-                <div class="cibes-feature-content">
-                    <h3 class="cibes-feature-title">創新電梯公司</h3>
-                    <div class="cibes-feature-divider"></div>
-                    <p class="cibes-feature-desc">Cibes 的創辦人 Bertil Svedberg 發明了第一套現代螺桿驅動是乘客電梯，所以從 Cibes 出品，即是螺桿驅動系統的原廠正品。</p>
+                <div class="cibes-feature-header">
+                    <div class="cibes-feature-title-wrapper">
+                        <h3 class="cibes-feature-title">創新電梯公司</h3>
+                        <div class="cibes-feature-divider"></div>
+                    </div>
+                    <div class="cibes-feature-icon">
+                        <img src="<?= asset('images/cibes/icon2.png') ?>" alt="創新電梯公司">
+                    </div>
                 </div>
-                <div class="cibes-feature-icon">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                        <path d="M5 3l4 4"/>
-                        <path d="M19 21l-4-4"/>
-                    </svg>
-                </div>
+                <p class="cibes-feature-desc">Cibes 的創辦人 Bertil Svedberg 發明了第一套現代螺桿驅動是乘客電梯，所以從 Cibes 出品，即是螺桿驅動系統的原廠正品。</p>
             </div>
             
             <!-- 卡片 3: 超過 75 年經驗 -->
             <div class="cibes-feature-card dark">
-                <div class="cibes-feature-content">
-                    <h3 class="cibes-feature-title">超過 75 年經驗</h3>
-                    <div class="cibes-feature-divider"></div>
-                    <p class="cibes-feature-desc">Cibes 在螺桿螺母驅動升降機領域擁有全世界最長的經驗，至今這我們的技術仍是業界標竿。</p>
+                <div class="cibes-feature-header">
+                    <div class="cibes-feature-title-wrapper">
+                        <h3 class="cibes-feature-title">超過 75 年經驗</h3>
+                        <div class="cibes-feature-divider"></div>
+                    </div>
+                    <div class="cibes-feature-icon">
+                        <img src="<?= asset('images/cibes/icon3.png') ?>" alt="超過 75 年經驗">
+                    </div>
                 </div>
-                <div class="cibes-feature-icon">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12 6 12 12 16 14"/>
-                        <path d="M12 2v2"/>
-                        <path d="M12 20v2"/>
-                        <path d="M20 12h2"/>
-                        <path d="M2 12h2"/>
-                    </svg>
-                </div>
+                <p class="cibes-feature-desc">Cibes 在螺桿螺母驅動升降機領域擁有全世界最長的經驗，至今這我們的技術仍是業界標竿。</p>
             </div>
             
             <!-- 卡片 4: 全球客戶支援 -->
             <div class="cibes-feature-card light">
-                <div class="cibes-feature-content">
-                    <h3 class="cibes-feature-title">全球客戶支援</h3>
-                    <div class="cibes-feature-divider"></div>
-                    <p class="cibes-feature-desc">Cibes 在各大洲 70 多個國家均設有直銷和分銷據點，無論身處何處都能提供最佳銷售服務。</p>
+                <div class="cibes-feature-header">
+                    <div class="cibes-feature-title-wrapper">
+                        <h3 class="cibes-feature-title">全球客戶支援</h3>
+                        <div class="cibes-feature-divider"></div>
+                    </div>
+                    <div class="cibes-feature-icon">
+                        <img src="<?= asset('images/cibes/icon4.png') ?>" alt="全球客戶支援">
+                    </div>
                 </div>
-                <div class="cibes-feature-icon">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                        <line x1="3" y1="9" x2="21" y2="9"/>
-                        <line x1="9" y1="21" x2="9" y2="9"/>
-                        <rect x="12" y="12" width="6" height="6"/>
-                    </svg>
-                </div>
+                <p class="cibes-feature-desc">Cibes 在各大洲 70 多個國家均設有直銷和分銷據點，無論身處何處都能提供最佳銷售服務。</p>
             </div>
         </div>
     </div>
@@ -139,7 +118,7 @@
 <!-- Carbon Reduction Section - 減少溫室氣體排放 (左圖右文) -->
 <section class="cibes-content-section reverse">
     <div class="container">
-        <div class="cibes-content-wrapper">
+        <div class="cibes-content-wrapper" style="grid-template-columns: 1.4fr 1fr;">
             <div class="cibes-content-image">
                 <img src="<?= asset('images/frontend/cibes/carbon-reduction.jpg') ?>" alt="減少溫室氣體排放">
             </div>

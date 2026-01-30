@@ -10,7 +10,7 @@
     <div class="container">
         <div class="about-intro-wrapper">
             <div class="about-intro-content">
-                <p class="about-intro-lead">家，是承載歲月的容器。</p>
+                <p class="about-intro-lead"></p>
                 <p class="about-intro-desc">鴻展盟成立的初衷很簡單，我們希望隨著時間推移，家依然是一座最自在的生活堡壘，不會因為任何外在變遷而感到負擔。所以我們專注引進全球頂尖的科技產品，不僅是為了解決生活難題，更是為了讓身處科技世代的人們，擁有不被時間與環境打敗的底氣，自信邁出生活中的每一步。</p>
             </div>
             <div class="about-intro-title-wrapper">
@@ -38,14 +38,9 @@
                         <span>為本</span>
                     </h3>
                     <div class="philosophy-card-divider"></div>
-                    <p class="philosophy-card-desc">我們是一家全球公司，但我們的總部與主要工廠仍設置在瑞典，這樣深植於瑞典的精神，將定義與塑造我們的靈魂。</p>
+                    <p class="philosophy-card-desc">我们在意每一个微小的使用感受，確保安全與舒適，是所有產品的核心邏輯。</p>
                     <div class="philosophy-card-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
+                        <img src="<?= asset('images/about/icon1.png') ?>" alt="" >
                     </div>
                 </div>
             </div>
@@ -60,13 +55,7 @@
                     <div class="philosophy-card-divider"></div>
                     <p class="philosophy-card-desc">運用最新科技打破生活限制。讓科技為生活裝上翅膀，賦予生活更自由的可能，將繁瑣交給技術，把純粹的享受留給自己。</p>
                     <div class="philosophy-card-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21"/>
-                            <line x1="12" y1="17" x2="12" y2="21"/>
-                            <path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01"/>
-                            <path d="M6 12h.01M10 12h.01M14 12h.01M18 12h.01"/>
-                        </svg>
+                        <img src="<?= asset('images/about/icon2.png') ?>" alt="" >
                     </div>
                 </div>
             </div>
@@ -81,9 +70,7 @@
                     <div class="philosophy-card-divider"></div>
                     <p class="philosophy-card-desc">打破科技屬於年輕世代的迷思。選擇以簡單、易懂的科技產品，消除使用門檻，讓不同年齡層都能輕鬆駕馭。</p>
                     <div class="philosophy-card-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                        </svg>
+                        <img src="<?= asset('images/about/icon3.png') ?>" alt="">
                     </div>
                 </div>
             </div>
@@ -98,11 +85,7 @@
                     <div class="philosophy-card-divider"></div>
                     <p class="philosophy-card-desc">拒絕妥協與將就。堅持實用與美感並存，讓每一項設備不只是工具，更是居家品味的優雅延伸。</p>
                     <div class="philosophy-card-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2C8.5 2 6 5.5 6 9c0 2.5 1 4.5 2 6v5h8v-5c1-1.5 2-3.5 2-6 0-3.5-2.5-7-6-7z"/>
-                            <path d="M9 22h6"/>
-                            <circle cx="12" cy="9" r="2"/>
-                        </svg>
+                        <img src="<?= asset('images/about/icon4.png') ?>" alt="">
                     </div>
                 </div>
             </div>
@@ -133,13 +116,12 @@
     <div class="container">
         <div class="service-promise-wrapper">
             <div class="service-promise-image">
-                <img src="<?= asset('images/frontend/about/service.jpg') ?>" alt="服務與承諾">
+                <img src="<?= asset('images/about/服務與承諾.png') ?>" alt="服務與承諾">
             </div>
             <div class="service-promise-content">
                 <p class="service-promise-label">SERVICE PROMISE</p>
                 <h2 class="service-promise-title">服務與承諾</h2>
                 <div class="service-promise-desc">
-                    <p>銷售不是終點，而是責任的起點。</p>
                     <p>我們堅信，消費者交付給鴻展盟的不只是居家的規劃，更是對未來生活的期待。因此，我們將「服務」視為企業的基石，以誠信為本，建立嚴謹且完整的售後體系。我們不只是做設備的供應者，更致力成為守護居家品質、值得長久信賴的夥伴。</p>
                 </div>
             </div>

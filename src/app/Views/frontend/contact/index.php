@@ -4,10 +4,6 @@
         <img src="<?= asset('images/products/banner1.jpg') ?>" alt="聯繫我們">
     </div>
     <div class="contact-page-banner-overlay"></div>
-    <div class="contact-page-banner-content">
-        <p class="contact-page-banner-label">CONTACT US</p>
-        <h1 class="contact-page-banner-title">聯繫我們</h1>
-    </div>
 </section>
 
 <!-- Intro Section - 左內容右標題 -->
@@ -54,7 +50,7 @@
             <img src="<?= asset('images/about/bg01.jpg') ?>" alt="理解您對家的想像">
         </div>
     </div>
-    <div class="container">
+    <div class="container" style="max-width: 100%;">
         <div class="contact-details-content">
             <p class="contact-details-label">PLANNING YOUR HOME</p>
             <h2 class="contact-details-title">理解您對家的想像</h2>
@@ -64,6 +60,11 @@
             </div>
         </div>
     </div>
+</section>
+
+<!-- Divider Section -->
+<section class="contact-divider-section">
+    <div class="contact-vertical-line"></div>
 </section>
 
 <!-- Contact Section -->

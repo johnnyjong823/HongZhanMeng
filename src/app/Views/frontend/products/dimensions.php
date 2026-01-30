@@ -11,7 +11,7 @@
             </div>
             <h2 class="installation-title">安裝  只需 <span class="highlight">5-7</span> 天</h2>
             <p class="installation-desc"></p>
-            <p class="installation-text">得益於瑞典原廠的模組化預製技術,Ascenda 的所有部件皆已準備就緒。就像組裝精密的像俱一樣,我們將施工現場的噪音與粉塵降至最低。從進場到完工測試,僅需5-7個工作天,即可讓家垂直連通。</p>
+            <p class="installation-text">得益於瑞典原廠的模組化預製技術，Ascenda 的所有部件皆已準備就緒。就像組裝精密的像俱一樣，我們將施工現場的噪音與粉塵降至最低。從進場到完工測試，僅需5-7個工作天，即可讓家垂直連通。</p>
         </div>
         <div class="dimensions-header">
             <span class="dimensions-tag">DIMENSIONS</span>
@@ -135,7 +135,7 @@
                 <p class="space-fit-title-en">TOP CLEARANCE</p>
                 <h3 class="feature-title">垂直淨空，最小需求空間</h3>
                 <p class="feature-desc">
-                    極小化電梯所需的空間。Ascenda 僅需 2,330mm 的頂部淨空，能輕鬆適應絕大多數的標準天花板高度。不同於傳統電梯需要切開屋頂或加高結構，Ascenda 不必破壞原本的裝潢結構，在原有的高度裡，也能擁有無限的生活自由。
+                    極小化電梯所需的空間。Ascenda 僅需 2，330mm 的頂部淨空，能輕鬆適應絕大多數的標準天花板高度。不同於傳統電梯需要切開屋頂或加高結構，Ascenda 不必破壞原本的裝潢結構，在原有的高度裡，也能擁有無限的生活自由。
                 </p>
             </div>
             <div class="feature-image">
