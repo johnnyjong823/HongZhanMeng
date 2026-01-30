@@ -12,7 +12,10 @@
                     <?php else: ?>
                     <img src="<?= url($banner['image_path']) ?>" alt="<?= htmlspecialchars($banner['title']) ?>" class="hero-image">
                     <?php endif; ?>
-                    <img src="<?= asset('images/frontend/hero-mark.jpg') ?>" alt="Hero Mark" class="hero-mark">
+                    <div class="hero-mark-wrapper">
+                        <img src="<?= asset('images/frontend/hero-mark.jpg') ?>" alt="Hero Mark" class="hero-mark">
+                        <a href="#about" class="btn-read-more">Read More ></a>
+                    </div>
                 </div>
                 <?php endforeach; ?>
             <?php else: ?>
@@ -21,11 +24,17 @@
                     <video class="hero-video" autoplay muted loop playsinline>
                         <source src="<?= asset('images/frontend/首頁影片_compressed.mp4') ?>" type="video/mp4">
                     </video>
-                    <img src="<?= asset('images/frontend/hero-mark.jpg') ?>" alt="Hero Mark" class="hero-mark">
+                    <div class="hero-mark-wrapper">
+                        <img src="<?= asset('images/frontend/hero-mark.jpg') ?>" alt="Hero Mark" class="hero-mark">
+                        <a href="#about" class="btn-read-more">Read More ></a>
+                    </div>
                 </div>
                 <div class="hero-slide" data-index="1">
                     <img src="<?= asset('images/frontend/hero-bg.png') ?>" alt="Cibes 愛升達家用電梯" class="hero-image">
-                    <img src="<?= asset('images/frontend/hero-mark.jpg') ?>" alt="Hero Mark" class="hero-mark">
+                    <div class="hero-mark-wrapper">
+                        <img src="<?= asset('images/frontend/hero-mark.jpg') ?>" alt="Hero Mark" class="hero-mark">
+                        <a href="#about" class="btn-read-more">Read More ></a>
+                    </div>
                 </div>
             <?php endif; ?>
         </div>

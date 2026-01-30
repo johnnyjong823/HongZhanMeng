@@ -103,7 +103,7 @@ class HomeController extends Controller
      */
     public function productsDimensions()
     {
-        // 取得愛生達產品的 FAQ
+        // 取得愛升達產品的 FAQ
         $productModel = new Product();
         $productFaqModel = new ProductFaq();
         
@@ -136,9 +136,20 @@ class HomeController extends Controller
      */
     public function productsFaq()
     {
+        // 取得愛升達產品的 FAQ
+        $productModel = new Product();
+        $productFaqModel = new ProductFaq();
+        
+        $faqs = [];
+        $product = $productModel->findBySlug('ascenda');
+        if ($product) {
+            $faqs = $productFaqModel->getByProductId($product['id'], true);
+        }
+        
         return $this->view('frontend/products/faq', [
             'title' => '產品 Q&A｜Ascenda 愛升達家用電梯',
-            'description' => '關於 Ascenda 愛升達家用電梯的常見問題解答。'
+            'description' => '關於 Ascenda 愛升達家用電梯的常見問題解答。',
+            'faqs' => $faqs
         ], 'frontend');
     }
     

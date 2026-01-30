@@ -32,11 +32,65 @@
     </div>
 </section>
 
-<!-- Elevator Image Section -->
+<!-- Elevator Image Section with Interactive Hotspots -->
 <section class="ascenda-elevator-showcase">
     <div class="container">
-        <div class="elevator-image-wrapper">
-            <img src="<?= asset('images/products/ascenda-elevator.jpg') ?>" alt="Ascenda 電梯外觀">
+        <div class="elevator-hotspot-wrapper">
+            <!-- 中間圖片 -->
+            <div class="elevator-image-container">
+                <img src="<?= asset('images/products/ascenda-elevator.jpg') ?>" alt="Ascenda 電梯外觀">
+            </div>
+            
+            <!-- 熱點組合 1: 右側 - 智慧照明系統 -->
+            <div class="hotspot-group right" style="top: 15%;left: 70%;">
+                <div class="hotspot-dot" style=""></div>
+                <div class="hotspot-connector"></div> 
+                <div class="hotspot-info">
+                    <h4 class="hotspot-info-title">創新艙口蓋板系統</h4>
+                    <p class="hotspot-info-desc">當電梯下降至下層停止點時,艙口蓋板會滑入上層地板,完全覆蓋電梯井口,讓您可以自由地在空間中走動。</p>
+                </div>
+                               
+            </div>
+
+            <!-- 熱點組合 2: 左側 - 人體工學扶手 -->
+            <div class="hotspot-group left" style="top: 31%;left: 15%;">
+                <div class="hotspot-info">
+                    <h4 class="hotspot-info-title">扶手控制和内裝座椅</h4>
+                    <p class="hotspot-info-desc">只需將手放在扶手上,即可啟動電梯,享受舒適旅程,移動間還可放下座椅休息。</p>
+                </div>
+                <div class="hotspot-connector"></div>
+                <div class="hotspot-dot" style=""></div>
+            </div>
+            
+            <!-- 熱點組合 3: 右側 - 全景玻璃門 -->
+            <div class="hotspot-group right" style="top: 36%;left: 66%;">
+                <div class="hotspot-dot" style=""></div>
+                <div class="hotspot-connector" style="width:200px"></div>
+                <div class="hotspot-info">
+                    <h4 class="hotspot-info-title">全封閉式轎廂</h4>
+                    <p class="hotspot-info-desc">採用雙層鋼化夾膠玻璃封閉式車廂,美觀安全,對兒童、寵物都非常友善。</p>
+                </div>
+            </div>
+            
+            <!-- 熱點組合 4: 左側 - 人體工學扶手 -->
+            <div class="hotspot-group left" style="top: 45%;left: 16%;">
+                <div class="hotspot-info">
+                    <h4 class="hotspot-info-title">轎底安全觸板</h4>
+                    <p class="hotspot-info-desc">當電梯運作時,如有任何東西進入電梯下面,一但觸及安全板,電梯將自動停止。</p>
+                </div>
+                <div class="hotspot-connector" style="width:115px"></div>
+                <div class="hotspot-dot" style=""></div>
+            </div>
+            
+            <!-- 熱點組合 5: 右側 - 防滑地板 -->
+            <div class="hotspot-group right" style="top: 50%;left: 65%;">
+                <div class="hotspot-dot" style=""></div>
+                <div class="hotspot-connector" style="width:224px"></div>
+                <div class="hotspot-info">
+                    <h4 class="hotspot-info-title">靜音螺桿驅動系統</h4>
+                    <p class="hotspot-info-desc">搭載了EcoSilent驅動系統,將運行能耗與聲音降至極低,保證絕對的安全與穩固。</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -53,15 +107,15 @@
         <!-- Feature 1: 左文右圖 -->
         <div class="feature-row">
             <div class="feature-text">
-                <div class="feature-title-en">
-                    <div class="feature-title-line1">EcoSilent</div>
+                <div class="feature-title-en2">
+                    <div class="feature-title-line1" style="font-size:5rem">EcoSilent</div>
                     <div class="feature-title-line2" style="color:#FFF">.</div>
                 </div>
                 <h4 class="feature-subtitle">螺桿驅動技術</h4>
-                <p class="feature-desc">安靜，源自於對家用電梯的精準控制。<br />EcoSilent 螺桿系統不僅改變了電梯運行的方式，更重新定義了家用能源的使用效率。不僅運作時極致靜音，電力消耗更獲得歐盟 A 級能源標籤認證 (Energy Label A)。能用最少的能源，提供最穩固的垂直升力，大幅改善居家生活品質。</p>
+                <p class="feature-desc">EcoSilent螺桿系統不僅改變了電梯運行的方式,更重新定義了家用能源的使用效率。不僅運作時極致靜音,電力消耗更獲得歐盟A級能源標籤認證(Energy Label A)。能用最少的能源,提供最穩固的垂直升力,大幅改善居家生活品質。</p>
             </div>
             <div class="feature-image">
-                <img src="<?= asset('images/products/feature-1.jpg') ?>" alt="EcoSilent 螺桿驅動技術">
+                <img src="<?= asset('images/products/EcoSilent 螺桿驅動技術.png') ?>" alt="EcoSilent 螺桿驅動技術">
             </div>
         </div>
 
@@ -76,12 +130,12 @@
                 <p class="feature-desc">真正便利，是讓科技適應生活的習慣。Ascenda 同時具備三種直覺的操作方式。您可透過車廂內的人體工學面板、扶手處的控制按鈕，或是可隨身攜帶的專屬遙控器來操作電梯。無論身在何處，上下樓層始終從容輕鬆。</p>
             </div>
             <div class="feature-image">
-                <img src="<?= asset('images/products/feature-2.jpg') ?>" alt="TOTAL CONTROL 掌控隨心所欲">
+                <img src="<?= asset('images/products/TOTAL CONTROL 掌控隨心所欲.png') ?>" alt="TOTAL CONTROL 掌控隨心所欲">
             </div>
         </div>
 
         <!-- Feature 3: 左文右圖 -->
-        <div class="feature-row">
+        <div class="feature-row" style="grid-template-columns: 1fr 1fr;">
             <div class="feature-text">
                 <div class="feature-title-en">
                     <div class="feature-title-line1">PITLESS</div>
@@ -91,7 +145,7 @@
                 <p class="feature-desc">不同於傳統電梯需向下開挖基坑，Ascenda 突破結構限制，甚至可直接安裝於現有地板上。無需大興土木破壞地基，不僅大幅縮短了安裝工期，更完整保留了家中珍貴的裝潢與原有地磚，讓升級生活變得簡單而優雅。</p>
             </div>
             <div class="feature-image">
-                <img src="<?= asset('images/products/feature-3.jpg') ?>" alt="PITLESS DESIGN 無機坑設計">
+                <img src="<?= asset('images/products/PITLESS DESIGN 無機坑設計.png') ?>" alt="PITLESS DESIGN 無機坑設計">
             </div>
         </div>
 
@@ -106,7 +160,7 @@
                 <p class="feature-desc">打破傳統電梯的封閉感，打造一座光的容器。<br />全車廂採用高規格的鋼化雙層夾膠玻璃，在極致通透的視覺中，提供絕對的安全與隔音效果。搭配環繞式全景燈光設計，無論是白畫的自然光漫射，或夜晚的氛圍照明，都像一件精緻的玻璃工藝，輕鬆地融入居家視野。</p>
             </div>
             <div class="feature-image">
-                <img src="<?= asset('images/products/feature-4.jpg') ?>" alt="PANORAMIC VIEW 讓光線自在穿透">
+                <img src="<?= asset('images/products/PANORAMIC VIEW 讓光線自在穿透.png') ?>" alt="PANORAMIC VIEW 讓光線自在穿透">
             </div>
         </div>
 
@@ -121,7 +175,7 @@
                 <p class="feature-desc">安全設計的原點，也是唯一的終點。<br>Ascenda 嚴格遵循歐洲 (EN 81-41) 和美國 (ASME 17.1) 兩大國際安全標準，確保每一次的體驗，都是最穩固而安心的託付。</p>
             </div>
             <div class="feature-image">
-                <img src="<?= asset('images/products/feature-5.jpg') ?>" alt="SAFETY ASSURANCE 歐美雙認證的安全保障">
+                <img src="<?= asset('images/products/SAFETY ASSURANCE 歐美雙認證的安全保障.png') ?>" alt="SAFETY ASSURANCE 歐美雙認證的安全保障">
             </div>
         </div>
     </div>

@@ -21,6 +21,8 @@ body {
     width: 100%;
     max-width: var(--container-xl);
     margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
 }
 
 .container-fluid {

@@ -43,10 +43,14 @@
                     <li class="nav-item has-dropdown">
                         <a href="<?= url('/products/ascenda') ?>" class="nav-link">產品介紹</a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?= url('/products/ascenda') ?>">Ascenda愛生達</a></li>
-                            <li><a href="<?= url('/products/dimensions') ?>">尺寸與安裝</a></li>
-                            <li><a href="<?= url('/products/dimensions#tech-resources') ?>">技術資料</a></li>
-                            <li><a href="<?= url('/products/dimensions#product-faq') ?>">產品 Q&A</a></li>
+                            <li class="has-submenu">
+                                <a href="<?= url('/products/ascenda') ?>">Ascenda 愛升達</a>
+                                <ul class="submenu">
+                                    <li><a href="<?= url('/products/dimensions') ?>">尺寸與安裝</a></li>
+                                    <li><a href="<?= url('/products/dimensions#tech-resources') ?>">技術資料</a></li>
+                                    <li><a href="<?= url('/products/faq') ?>">產品 Q&A</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">

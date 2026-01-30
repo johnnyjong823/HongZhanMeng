@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initFeaturesCarousel();
     initHeroCarousel();
+    initElevatorHotspots();
 });
 
 /**
@@ -22,6 +23,7 @@ function initMobileMenu() {
     const mainNav = document.querySelector('.main-nav');
     const navLinks = document.querySelectorAll('.nav-menu .nav-link');
     const dropdownItems = document.querySelectorAll('.has-dropdown');
+    const submenuItems = document.querySelectorAll('.has-submenu');
 
     if (!menuToggle || !mainNav) return;
 
@@ -45,6 +47,20 @@ function initMobileMenu() {
         });
     });
 
+    // Handle submenu on mobile - toggle on click
+    submenuItems.forEach(item => {
+        const link = item.querySelector(':scope > a');
+        
+        link.addEventListener('click', function(e) {
+            // 只在行動裝置上阻止連結跳轉並展開子選單
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                e.stopPropagation();
+                item.classList.toggle('active');
+            }
+        });
+    });
+
     // Close menu when clicking a nav link (non-dropdown)
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -58,16 +74,23 @@ function initMobileMenu() {
         });
     });
 
-    // Close menu when clicking dropdown sub-links
-    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+    // Close menu when clicking dropdown sub-links (including submenu links)
+    const dropdownLinks = document.querySelectorAll('.dropdown-menu a, .submenu a');
     dropdownLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
+            // 如果是 has-submenu 的直接連結，在行動版不關閉
+            const parent = this.closest('.has-submenu');
+            if (parent && this === parent.querySelector(':scope > a') && window.innerWidth <= 991) {
+                return;
+            }
+            
             if (window.innerWidth <= 991) {
                 menuToggle.classList.remove('active');
                 mainNav.classList.remove('active');
                 document.body.classList.remove('menu-open');
                 // 也關閉下拉選單
                 dropdownItems.forEach(item => item.classList.remove('active'));
+                submenuItems.forEach(item => item.classList.remove('active'));
             }
         });
     });
@@ -80,6 +103,7 @@ function initMobileMenu() {
             document.body.classList.remove('menu-open');
             // 也關閉下拉選單
             dropdownItems.forEach(item => item.classList.remove('active'));
+            submenuItems.forEach(item => item.classList.remove('active'));
         }
     });
 }
@@ -814,4 +838,126 @@ function initHeroCarousel() {
     
     // 視窗大小改變時重新調整
     window.addEventListener('resize', adjustHeroMargin);
+}
+
+/**
+ * Elevator Hotspots - 電梯圖片互動熱點
+ * 結構: .hotspot-group 包含 .hotspot-dot + .hotspot-connector + .hotspot-info
+ * 手機版使用 modal 彈出視窗
+ */
+function initElevatorHotspots() {
+    const hotspotWrapper = document.querySelector('.elevator-hotspot-wrapper');
+    if (!hotspotWrapper) return;
+
+    const hotspotGroups = hotspotWrapper.querySelectorAll('.hotspot-group');
+    
+    // 建立 Modal 元素（只建立一次）
+    let modalOverlay = document.querySelector('.hotspot-modal-overlay');
+    if (!modalOverlay) {
+        modalOverlay = document.createElement('div');
+        modalOverlay.className = 'hotspot-modal-overlay';
+        modalOverlay.innerHTML = `
+            <div class="hotspot-modal">
+                <button class="hotspot-modal-close" aria-label="關閉">&times;</button>
+                <h4 class="hotspot-modal-title"></h4>
+                <p class="hotspot-modal-desc"></p>
+            </div>
+        `;
+        document.body.appendChild(modalOverlay);
+        
+        // Modal 關閉事件
+        const modalClose = modalOverlay.querySelector('.hotspot-modal-close');
+        modalClose.addEventListener('click', closeModal);
+        
+        // 點擊背景關閉
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+        
+        // ESC 鍵關閉
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+    
+    const modalTitle = modalOverlay.querySelector('.hotspot-modal-title');
+    const modalDesc = modalOverlay.querySelector('.hotspot-modal-desc');
+
+    // 判斷是否為手機版（768px 以下）
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    // 開啟 Modal
+    function openModal(title, desc) {
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 關閉 Modal
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // 停用所有 hotspot groups
+    function deactivateAllGroups() {
+        hotspotGroups.forEach(group => {
+            group.classList.remove('active');
+        });
+    }
+
+    // 為每個 hotspot group 添加互動事件
+    hotspotGroups.forEach(group => {
+        const dot = group.querySelector('.hotspot-dot');
+        const info = group.querySelector('.hotspot-info');
+
+        // 點擊圓點
+        if (dot) {
+            dot.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                if (isMobile()) {
+                    // 手機版：顯示 Modal
+                    const title = info.querySelector('.hotspot-info-title')?.textContent || '';
+                    const desc = info.querySelector('.hotspot-info-desc')?.textContent || '';
+                    openModal(title, desc);
+                } else {
+                    // 平板/電腦版：切換 active 狀態
+                    const isActive = group.classList.contains('active');
+                    
+                    // 先停用所有
+                    deactivateAllGroups();
+                    
+                    // 如果之前不是啟動狀態，則啟動
+                    if (!isActive) {
+                        group.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // 點擊說明卡片維持顯示狀態（僅平板/電腦版）
+        if (info) {
+            info.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (!isMobile()) {
+                    group.classList.add('active');
+                }
+            });
+        }
+    });
+
+    // 點擊其他地方關閉所有 hotspots（僅平板/電腦版）
+    document.addEventListener('click', function(e) {
+        if (!isMobile() && !hotspotWrapper.contains(e.target)) {
+            deactivateAllGroups();
+        }
+    });
 }

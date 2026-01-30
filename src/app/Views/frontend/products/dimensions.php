@@ -10,8 +10,8 @@
                 <span class="dimensions-tag">INSTALLATION PROCESS</span>
             </div>
             <h2 class="installation-title">安裝  只需 <span class="highlight">5-7</span> 天</h2>
-            <p class="installation-desc">升級居家生活，不需要漫長的等待。</p>
-            <p class="installation-text">得益於瑞典原廠的模組化預製技術，Ascenda 的所有部件皆已準備就緒。就像組裝精密的傢俱一樣，我們將施工現場的噪音與粉塵降至最低。從進場到完工測試，僅需 5-7 個工作天，即可讓家垂直連通。</p>
+            <p class="installation-desc"></p>
+            <p class="installation-text">得益於瑞典原廠的模組化預製技術,Ascenda 的所有部件皆已準備就緒。就像組裝精密的像俱一樣,我們將施工現場的噪音與粉塵降至最低。從進場到完工測試,僅需5-7個工作天,即可讓家垂直連通。</p>
         </div>
         <div class="dimensions-header">
             <span class="dimensions-tag">DIMENSIONS</span>
@@ -87,7 +87,7 @@
                 <p>電梯內電話系統</p>
             </div>
             <div class="equipment-item">
-                <div class="equipment-image">
+                <div class="equipment-image" style="background-color: #FFF;">
                     <img src="<?= asset('images/frontend/電梯遙控器.png') ?>" alt="電梯遙控器">
                 </div>
                 <p>電梯遙控器</p>
@@ -110,7 +110,7 @@
                 </p>
             </div>
             <div class="feature-image">
-                <img src="<?= asset('images/frontend/through-floor.png') ?>" alt="穿透樓板">
+                <img src="<?= asset('images/products/穿透樓板.png') ?>" alt="穿透樓板">
             </div>
         </div>
 
@@ -125,7 +125,7 @@
                 </p>
             </div>
             <div class="feature-image">
-                <img src="<?= asset('images/frontend/existing-space-fit.png') ?>" alt="無需井道">
+                <img src="<?= asset('images/products/無需井道.png') ?>" alt="無需井道">
             </div>
         </div>
 
@@ -139,7 +139,7 @@
                 </p>
             </div>
             <div class="feature-image">
-                <img src="<?= asset('images/frontend/top-clearance.png') ?>" alt="垂直淨空">
+                <img src="<?= asset('images/products/垂直淨空.png') ?>" alt="垂直淨空">
             </div>
         </div>
     </div>
@@ -147,11 +147,9 @@
 
 <!-- Triangle Banner Section -->
 <section class="triangle-banner">
-    <div class="triangle-banner-background">
-        <img src="<?= asset('images/frontend/dimensions-banner.jpg') ?>" alt="背景圖片">
-        <div class="triangle-banner-overlay"></div>
-        <div class="triangle-banner-arrow"></div>
-    </div>
+    <img src="<?= asset('images/products/背景圖片.png') ?>" alt="背景圖片" class="triangle-banner-image">
+    <div class="triangle-banner-overlay"></div>
+    <div class="triangle-banner-arrow"></div>
 </section>
 
 <!-- Technical Resources Section -->
@@ -160,140 +158,45 @@
         <div class="tech-resources-line"></div>
         <h2 class="tech-resources-title-en">TECHNICAL RESOURCES</h2>
         <p class="tech-resources-title">相關技術型錄下載</p>
-        <a href="#" class="tech-resources-btn">點我下載型錄</a>
-        <div class="tech-resources-icons">
-            <div class="icons-row icons-row-3">
-                <div class="file-icon">
-                    <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 4C8 1.79 9.79 0 12 0H40L56 16V76C56 78.21 54.21 80 52 80H12C9.79 80 8 78.21 8 76V4Z" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <path d="M40 0V12C40 14.21 41.79 16 44 16H56" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <rect x="16" y="28" width="32" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="36" width="28" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="44" width="24" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="32" y="56" width="20" height="12" rx="2" fill="#C9A35A"/>
-                        <text x="42" y="66" font-size="8" fill="white" text-anchor="middle" font-weight="bold">File</text>
-                    </svg>
-                </div>
-                <div class="file-icon">
-                    <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 4C8 1.79 9.79 0 12 0H40L56 16V76C56 78.21 54.21 80 52 80H12C9.79 80 8 78.21 8 76V4Z" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <path d="M40 0V12C40 14.21 41.79 16 44 16H56" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <rect x="16" y="28" width="32" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="36" width="28" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="44" width="24" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="32" y="56" width="20" height="12" rx="2" fill="#C9A35A"/>
-                        <text x="42" y="66" font-size="8" fill="white" text-anchor="middle" font-weight="bold">File</text>
-                    </svg>
-                </div>
-                <div class="file-icon">
-                    <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 4C8 1.79 9.79 0 12 0H40L56 16V76C56 78.21 54.21 80 52 80H12C9.79 80 8 78.21 8 76V4Z" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <path d="M40 0V12C40 14.21 41.79 16 44 16H56" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <rect x="16" y="28" width="32" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="36" width="28" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="44" width="24" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="32" y="56" width="20" height="12" rx="2" fill="#C9A35A"/>
-                        <text x="42" y="66" font-size="8" fill="white" text-anchor="middle" font-weight="bold">File</text>
-                    </svg>
+        
+        <!-- 技術資源區塊 -->
+        <div class="tech-resources-grid">
+            <div class="tech-resource-item">
+                <h3 class="tech-resource-title">產品型錄</h3>
+                <p class="tech-resource-subtitle">Product Catalog</p>
+                <div class="tech-resource-image">
+                    <img src="<?= asset('images/frontend/tech-catalog.jpg') ?>" alt="產品型錄">
                 </div>
             </div>
-            <div class="icons-row icons-row-4">
-                <div class="file-icon">
-                    <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 4C8 1.79 9.79 0 12 0H40L56 16V76C56 78.21 54.21 80 52 80H12C9.79 80 8 78.21 8 76V4Z" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <path d="M40 0V12C40 14.21 41.79 16 44 16H56" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <rect x="16" y="28" width="32" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="36" width="28" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="44" width="24" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="32" y="56" width="20" height="12" rx="2" fill="#C9A35A"/>
-                        <text x="42" y="66" font-size="8" fill="white" text-anchor="middle" font-weight="bold">File</text>
-                    </svg>
+            <div class="tech-resource-item">
+                <h3 class="tech-resource-title">安裝指南</h3>
+                <p class="tech-resource-subtitle">Installation Guide</p>
+                <div class="tech-resource-image">
+                    <img src="<?= asset('images/frontend/tech-installation.jpg') ?>" alt="安裝指南">
                 </div>
-                <div class="file-icon">
-                    <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 4C8 1.79 9.79 0 12 0H40L56 16V76C56 78.21 54.21 80 52 80H12C9.79 80 8 78.21 8 76V4Z" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <path d="M40 0V12C40 14.21 41.79 16 44 16H56" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <rect x="16" y="28" width="32" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="36" width="28" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="44" width="24" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="32" y="56" width="20" height="12" rx="2" fill="#C9A35A"/>
-                        <text x="42" y="66" font-size="8" fill="white" text-anchor="middle" font-weight="bold">File</text>
-                    </svg>
+            </div>
+            <div class="tech-resource-item">
+                <h3 class="tech-resource-title">尺寸規格</h3>
+                <p class="tech-resource-subtitle">Dimensions & Specs</p>
+                <div class="tech-resource-image">
+                    <img src="<?= asset('images/frontend/tech-dimensions.jpg') ?>" alt="尺寸規格">
                 </div>
-                <div class="file-icon">
-                    <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 4C8 1.79 9.79 0 12 0H40L56 16V76C56 78.21 54.21 80 52 80H12C9.79 80 8 78.21 8 76V4Z" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <path d="M40 0V12C40 14.21 41.79 16 44 16H56" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <rect x="16" y="28" width="32" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="36" width="28" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="44" width="24" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="32" y="56" width="20" height="12" rx="2" fill="#C9A35A"/>
-                        <text x="42" y="66" font-size="8" fill="white" text-anchor="middle" font-weight="bold">File</text>
-                    </svg>
+            </div>
+            <div class="tech-resource-item">
+                <h3 class="tech-resource-title">維護手冊</h3>
+                <p class="tech-resource-subtitle">Maintenance Manual</p>
+                <div class="tech-resource-image">
+                    <img src="<?= asset('images/frontend/tech-maintenance.jpg') ?>" alt="維護手冊">
                 </div>
-                <div class="file-icon">
-                    <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 4C8 1.79 9.79 0 12 0H40L56 16V76C56 78.21 54.21 80 52 80H12C9.79 80 8 78.21 8 76V4Z" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <path d="M40 0V12C40 14.21 41.79 16 44 16H56" fill="#F5EBDA" stroke="#C9A35A" stroke-width="2"/>
-                        <rect x="16" y="28" width="32" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="36" width="28" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="16" y="44" width="24" height="3" rx="1.5" fill="#C9A35A"/>
-                        <rect x="32" y="56" width="20" height="12" rx="2" fill="#C9A35A"/>
-                        <text x="42" y="66" font-size="8" fill="white" text-anchor="middle" font-weight="bold">File</text>
-                    </svg>
+            </div>
+            <div class="tech-resource-item">
+                <h3 class="tech-resource-title">安全認證</h3>
+                <p class="tech-resource-subtitle">Safety Certification</p>
+                <div class="tech-resource-image">
+                    <img src="<?= asset('images/frontend/tech-certification.jpg') ?>" alt="安全認證">
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Q&A Section -->
-<section class="faq-section" id="product-faq">
-    <div class="container">
-        <?php if (!empty($faqs)): ?>
-        <?php 
-            // 將 FAQ 分成左右兩欄
-            $totalFaqs = count($faqs);
-            $halfCount = ceil($totalFaqs / 2);
-            $leftFaqs = array_slice($faqs, 0, $halfCount);
-            $rightFaqs = array_slice($faqs, $halfCount);
-        ?>
-        <div class="faq-grid">
-            <!-- 左側欄 -->
-            <div class="faq-column">
-                <?php foreach ($leftFaqs as $index => $faq): ?>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span class="faq-number">Q<sub><?= $index + 1 ?></sub></span>
-                        <h4><?= htmlspecialchars($faq['question']) ?></h4>
-                    </div>
-                    <div class="faq-answer">
-                        <?= nl2br(htmlspecialchars($faq['answer'])) ?>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-
-            <!-- 右側欄 -->
-            <div class="faq-column">
-                <?php foreach ($rightFaqs as $index => $faq): ?>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span class="faq-number">Q<sub><?= $halfCount + $index + 1 ?></sub></span>
-                        <h4><?= htmlspecialchars($faq['question']) ?></h4>
-                    </div>
-                    <div class="faq-answer">
-                        <?= nl2br(htmlspecialchars($faq['answer'])) ?>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-        <?php else: ?>
-        <div class="faq-empty">
-            <p>目前尚無常見問題，歡迎直接聯繫我們諮詢。</p>
-        </div>
-        <?php endif; ?>
     </div>
 </section>
 
